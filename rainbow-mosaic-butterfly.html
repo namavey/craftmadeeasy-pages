@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paint a rainbow butterfly with a mosaic effect in just one weekend</title>
+
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #ffffff;
+  color: #2c2c2c;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* COUNTDOWN BAR */
+.countdown-bar {
+  background: #111111;
+  padding: 14px 20px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.countdown-inner {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+}
+.cd-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 52px;
+}
+.cd-num {
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #E84B3C;
+  letter-spacing: 0.05em;
+  line-height: 1;
+}
+.cd-label {
+  font-size: 10px;
+  color: #ffffff;
+  letter-spacing: 0.12em;
+  margin-top: 3px;
+  font-weight: 400;
+}
+.cd-sep {
+  font-size: 22px;
+  color: #E84B3C;
+  font-weight: 700;
+  padding-bottom: 12px;
+}
+
+/* CONTENT WRAPPER */
+.content {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 24px;
+  text-align: center;
+}
+
+/* SECTION SPACING */
+.section { padding: 60px 0; }
+.section-sm { padding: 40px 0; }
+
+/* TYPOGRAPHY */
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.25;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  font-weight: 400;
+  color: #1a1a1a;
+  line-height: 1.3;
+  margin-bottom: 16px;
+}
+
+p {
+  font-size: 18px;
+  color: #2c2c2c;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+strong { font-weight: 600; }
+
+/* RAINBOW BUTTERFLY */
+.butterfly-b { color: rgb(233, 75, 60); }
+.butterfly-u { color: rgb(245, 138, 42); }
+.butterfly-t1 { color: rgb(246, 201, 69); }
+.butterfly-t2 { color: rgb(139, 207, 91); }
+.butterfly-e { color: rgb(63, 174, 106); }
+.butterfly-r { color: rgb(56, 182, 193); }
+.butterfly-f { color: rgb(58, 123, 213); }
+.butterfly-l { color: rgb(122, 92, 219); }
+.butterfly-y { color: rgb(198, 90, 203); }
+
+/* IMAGES */
+.page-img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+  display: block;
+  margin: 32px auto;
+}
+
+.page-img-sm {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 8px;
+  display: block;
+  margin: 28px auto;
+}
+
+/* DIVIDER */
+.divider {
+  width: 140px;
+  height: 2px;
+  background: #270707;
+  margin: 40px auto;
+  border: none;
+}
+
+/* BULLET LIST */
+.feature-list {
+  list-style: none;
+  text-align: left;
+  margin: 24px auto;
+  max-width: 620px;
+}
+
+.feature-list li {
+  font-size: 18px;
+  color: #2c2c2c;
+  padding: 10px 0 10px 28px;
+  position: relative;
+  line-height: 1.6;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.feature-list li::before {
+  content: '•';
+  position: absolute;
+  left: 8px;
+  color: #2c2c2c;
+  font-size: 20px;
+  top: 10px;
+}
+
+.feature-list li strong {
+  font-weight: 600;
+}
+
+/* BUTTON */
+.btn-cta {
+  display: block;
+  background: rgb(232, 98, 42);
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  padding: 22px 40px;
+  border-radius: 18px;
+  text-decoration: none;
+  text-align: center;
+  margin: 24px auto;
+  max-width: 540px;
+  transition: background 0.2s;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  border: none;
+}
+.btn-cta:hover { background: rgb(210, 82, 28); }
+
+.btn-note {
+  font-size: 14px;
+  color: #888;
+  margin-top: -12px;
+  margin-bottom: 16px;
+}
+
+/* PRICE SECTION */
+.price-section {
+  padding: 48px 0;
+}
+
+.price-was {
+  font-size: 28px;
+  color: #888;
+  text-decoration: line-through;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.price-label {
+  font-size: 22px;
+  font-weight: 400;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.price-now {
+  font-family: 'Playfair Display', serif;
+  font-size: 64px;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1;
+  margin: 8px 0;
+}
+
+.price-terms {
+  font-size: 17px;
+  color: #555;
+  margin-bottom: 24px;
+}
+
+/* MODULE SECTION */
+.module-header {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* GUARANTEE */
+.guarantee-box {
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 48px 40px;
+  text-align: center;
+  margin: 40px auto;
+}
+
+/* PAYMENT IMGS */
+.payment-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 20px auto;
+}
+.payment-row img {
+  height: 36px;
+  max-width: 180px;
+  object-fit: contain;
+}
+
+/* FAQ */
+.faq-item {
+  border-bottom: 1px solid #e8e8e8;
+  text-align: left;
+}
+
+.faq-q {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+  padding: 24px 40px 24px 0;
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+}
+
+.faq-q::after {
+  content: '+';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  font-weight: 300;
+  color: #888;
+  transition: transform 0.2s;
+}
+
+.faq-item.open .faq-q::after {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.faq-a {
+  font-size: 17px;
+  color: #555;
+  line-height: 1.7;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.2s;
+  text-align: left;
+}
+
+.faq-item.open .faq-a {
+  max-height: 400px;
+  padding-bottom: 24px;
+}
+
+/* FOOTER */
+.site-footer {
+  background: #ffffff;
+  border-top: 1px solid #eee;
+  padding: 48px 20px;
+  text-align: center;
+}
+
+.site-footer img {
+  height: 40px;
+  margin-bottom: 16px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-links {
+  font-size: 14px;
+  color: #999;
+  margin-top: 8px;
+}
+
+.footer-links a {
+  color: #999;
+  text-decoration: none;
+  margin: 0 10px;
+}
+.footer-links a:hover { color: #555; text-decoration: underline; }
+
+/* LUCIE PHOTO */
+.lucie-photo {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 12px;
+  display: block;
+  margin: 32px auto;
+}
+
+/* INCLUDED SUMMARY */
+.included-list {
+  list-style: none;
+  text-align: left;
+  margin: 24px auto;
+  max-width: 560px;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.included-list li {
+  padding: 14px 20px;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.included-list li:last-child { border-bottom: none; }
+
+.included-list .check { color: rgb(232, 98, 42); font-size: 18px; flex-shrink: 0; }
+
+/* TOTAL VALUE */
+.total-value {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 12px 0 4px;
+  text-align: center;
+}
+
+/* ITALIC */
+em { font-style: italic; }
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  h1 { font-size: 32px; }
+  h2 { font-size: 26px; }
+  h3 { font-size: 22px; }
+  .price-now { font-size: 48px; }
+  .btn-cta { font-size: 18px; }
+}
+@font-face { font-family: "Inter"; src: url("fonts/inter-regular.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("fonts/inter-medium.woff2") format("woff2"); font-weight: 500; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("fonts/inter-semibold.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Playfair Display"; src: url("fonts/playfair-regular.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Playfair Display"; src: url("fonts/playfair-bold.woff2") format("woff2"); font-weight: 700; font-display: swap; }
+</style>
+</head>
+<body>
+
+<!-- COUNTDOWN BAR -->
+<div class="countdown-bar">
+  <div class="countdown-inner">
+    <div class="cd-unit"><span class="cd-num" id="cd-days">00</span><span class="cd-label">DAYS</span></div>
+    <span class="cd-sep">:</span>
+    <div class="cd-unit"><span class="cd-num" id="cd-hours">01</span><span class="cd-label">HOURS</span></div>
+    <span class="cd-sep">:</span>
+    <div class="cd-unit"><span class="cd-num" id="cd-mins">14</span><span class="cd-label">MINUTES</span></div>
+    <span class="cd-sep">:</span>
+    <div class="cd-unit"><span class="cd-num" id="cd-secs">59</span><span class="cd-label">SECONDS</span></div>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="section">
+  <div class="content">
+    <h1><strong>Paint a rainbow <span class="butterfly-b">b</span><span class="butterfly-u">u</span><span class="butterfly-t1">t</span><span class="butterfly-t2">t</span><span class="butterfly-e">e</span><span class="butterfly-r">r</span><span class="butterfly-f">f</span><span class="butterfly-l">l</span><span class="butterfly-y">y</span></strong> with a mosaic effect in just one weekend</h1>
+    <p>even if you haven't painted since elementary school</p>
+    <img class="page-img" src="images/moodsetter-butterfly.webp" alt="Rainbow mosaic butterfly painting framed on wall">
+
+    <p>No drawing needed. You simply follow the butterfly outline.</p>
+
+    <p><strong>Imagine yourself…</strong></p>
+    <ul class="feature-list">
+      <li>Painting colorful mosaic shapes… and slowly watching a vibrant butterfly come to life.</li>
+      <li>Framing your finished rainbow butterfly and smiling every time someone asks, <em>"Wait… you painted that?"</em></li>
+      <li>Discovering that you were creative all along. You just needed the right method.</li>
+    </ul>
+
+    <hr class="divider">
+
+    <p>Most people look at a painting like this and immediately think:</p>
+    <p><em>"I could never do that."</em><br><em>"I'd mess up the edges."</em><br><em>"And once I ruin it… there's no fixing it."</em></p>
+    <p>That fear is real.</p>
+    <p>It stops so many people before they even pick up a brush and honestly… it makes sense.</p>
+    <p>Yet it's actually much simpler than you think and here's why:</p>
+    <p><strong>This mosaic effect isn't created with perfect brush control.</strong></p>
+    <p>Before you start painting, the mosaic lines are protected by a removable masking layer.</p>
+    <p>So when you begin painting, you don't have to be precise or fight tiny edges.</p>
+    <p>You simply paint by color zone freely and confidently.</p>
+    <p>And when everything is dry, you just peel.</p>
+    <p>Then the crisp white mosaic lines appear underneath — clean and effortless.</p>
+    <p>No messy edges. No frustration.</p>
+    <p>Just paint. Peel. Reveal.</p>
+    <p>That's when it hits you:</p>
+    <p><strong>"Wait… that's all it takes?"</strong></p>
+  </div>
+</div>
+
+<!-- LUCIE -->
+<div class="section" style="background:#fafafa; padding:60px 0;">
+  <div class="content">
+    <h2>Hi ! I'm Lucie</h2>
+    <img class="lucie-photo" src="images/creator.webp" alt="Lucie, workshop instructor">
+    <p>I've been there too, staring at a blank page, convinced I was about to ruin it.</p>
+    <p>And that's when I stopped trying to be perfect… and just started playing.</p>
+    <p>For years, I experimented with different ways of painting and playing with color.</p>
+    <p>I created <strong>over 50 mosaic-style paintings</strong>, some hanging in my home, others given away as gifts.</p>
+    <p>It's only recently that I started sharing my process with complete beginners who had never touched a paintbrush before.</p>
+    <p>And almost immediately, I noticed the same pattern again and again.</p>
+    <p>Most beginners don't struggle because they lack talent.</p>
+    <p>They struggle because they're overwhelmed.</p>
+    <p>Too much pressure to "get it right."</p>
+    <p>So I stripped it all back.</p>
+    <p>I created <strong>a simple 3-step mosaic painting process</strong> that removes the complexity and keeps only what truly matters.</p>
+    <p>Clear structure and step-by-step guidance.</p>
+    <p>My goal isn't to turn you into a professional artist.</p>
+    <p>It's to help you create something you're genuinely proud to hang on your wall.</p>
+    <p>Something bold, vibrant and entirely your own.</p>
+  </div>
+</div>
+
+<!-- THE WORKSHOP -->
+<div class="section">
+  <div class="content">
+    <h2>The Rainbow Mosaic Butterfly Workshop</h2>
+    <img class="page-img" src="images/mock-up-butterfly.webp" alt="Workshop mockup">
+    <p>If you're thinking… <em>"Okay, this actually feels doable."</em></p>
+    <p>Good.</p>
+    <p>Because that's exactly what this workshop is designed for.</p>
+    <p>Inside the Rainbow Mosaic Butterfly Workshop, I guide you through the entire painting process step by step, so you always know exactly what to do next.</p>
+    <p>Here's what you'll discover:</p>
+
+    <hr class="divider">
+
+    <!-- MODULE 1 -->
+    <span class="module-header">Module 1</span>
+    <h2>Tools, Materials and Setup</h2>
+    <p>Everything you need before you begin. And nothing you don't.</p>
+    <ul class="feature-list">
+      <li><strong>The one type of paper the Peel and Reveal Technique needs and why the wrong one will ruin your painting</strong></li>
+      <li><strong>The only three brushes you truly need <em>(hint: you probably already own them)</em></strong></li>
+      <li><strong>How to set up your workspace so painting feels relaxed from the very first brushstroke</strong></li>
+    </ul>
+    <img class="page-img-sm" src="images/module-1-butterfly.webp" alt="Module 1 - Tools">
+
+    <hr class="divider">
+
+    <!-- MODULE 2 -->
+    <span class="module-header">Module 2</span>
+    <h2>Transferring Your Butterfly</h2>
+    <p><em>How to recreate the butterfly using a simple grid, even if you've never drawn before.</em></p>
+    <img class="page-img-sm" src="images/module-2-butterfly.webp" alt="Module 2 - Transferring">
+    <ul class="feature-list">
+      <li><strong>How the grid breaks the butterfly into small sections you trace one at a time</strong></li>
+      <li><strong>How to transfer your outline cleanly without visible marks or messy guidelines ruining your final painting</strong></li>
+      <li><strong>The common tracing mistake that can permanently dent your paper and how to avoid it with one simple adjustment</strong></li>
+    </ul>
+
+    <hr class="divider">
+
+    <!-- MODULE 3 -->
+    <span class="module-header">Module 3</span>
+    <h2>The Peel and Reveal Technique</h2>
+    <p><em>How to apply drawing gum along the mosaic lines, the simple method behind the clean mosaic effect.</em></p>
+    <ul class="feature-list">
+      <li><strong>How to trace the mosaic joints with confidence, even if your lines aren't perfectly straight</strong></li>
+      <li><strong>Exactly how long to let the drawing gum dry so every joint stays protected before you start painting</strong></li>
+      <li><strong>The quick visual test that tells you the drawing gum is fully dry so you don't start too early and ruin your lines</strong></li>
+    </ul>
+    <img class="page-img-sm" src="images/module-3-butterfly.webp" alt="Module 3 - Peel and Reveal">
+
+    <hr class="divider">
+
+    <!-- MODULE 4 -->
+    <span class="module-header">Module 4</span>
+    <h2>Painting by Color Zone</h2>
+    <p>How to paint freely by color, creating smooth transitions, vibrant gradients, and that signature rainbow mosaic look.</p>
+    <img class="page-img-sm" src="images/module-4-butterfly.webp" alt="Module 4 - Painting">
+    <ul class="feature-list">
+      <li><strong>The color zone method that lets you paint freely. No careful edging, no second-guessing every stroke</strong></li>
+      <li><strong>The simple blending trick that creates smooth rainbow transitions without muddy colors</strong></li>
+      <li><strong>The one simple step to complete before moving to the next color zone so your colors stay clean and don't bleed into each other</strong></li>
+    </ul>
+
+    <hr class="divider">
+
+    <!-- MODULE 5 -->
+    <span class="module-header">Module 5</span>
+    <h2>The Big Reveal</h2>
+    <p><em>Peel off the drawing gum, reveal the crisp mosaic lines, and get your artwork ready to display.</em></p>
+    <ul class="feature-list">
+      <li><strong>The exact moment to start peeling and why rushing it can undo everything</strong></li>
+      <li><strong>How to clean up the mosaic lines so they look crisp, white, and perfectly defined</strong></li>
+      <li><strong>How to finish and present your painting so it's something you'll actually want to hang on your wall</strong></li>
+    </ul>
+    <img class="page-img-sm" src="images/module-5-butterfly.webp" alt="Module 5 - The Reveal">
+  </div>
+</div>
+
+<!-- PRICING 1 -->
+<div class="price-section" style="background:#fff8f5;">
+  <div class="content">
+    <p><strong>This workshop normally sells for</strong> <s>$97</s></p>
+    <p>But that's not what you'll pay today.</p>
+    <p>This is the very first time I'm opening the workshop to the public.</p>
+    <p>To celebrate, I'm offering a special launch price for a limited time.</p>
+    <p>Right now, you can join for just:</p>
+    <div class="price-now">$47</div>
+    <p class="price-terms">One-time payment.<br>No subscriptions.<br>No hidden fees.</p>
+    <p>You get lifetime access to the entire workshop.</p>
+    <p>Go at your own pace and come back anytime.</p>
+    <p>Once this introductory window closes, the workshop returns to its regular <strong>$97</strong> price.</p>
+    <p>The special price won't last much longer.</p>
+    <p>This is your weekend to finally create something you're proud of.</p>
+
+    <h3>Click below to join the workshop at the special launch price.</h3>
+    <p>– Normally <s>$97</s> –</p>
+    <h3>Now Only $47</h3>
+    <p><strong>One-time purchase. Lifetime access.</strong></p>
+    <a class="btn-cta" href="https://www.craftmadeeasy.com/checkout-rainbow-mosaic-butterfly">Start My Butterfly Workshop</a>
+    <p class="btn-note">*If you click the button and the next page doesn't load, then the $47 offer no longer exists.</p>
+    <p>30-day money-back guarantee</p>
+    <div class="payment-row">
+      <img src="images/payment.png" alt="Payment methods">
+      <img src="images/secure.png" alt="Secure payment">
+    </div>
+  </div>
+</div>
+
+<!-- GUARANTEE -->
+<div class="section" style="background:#fafafa;">
+  <div class="content">
+    <h3>30-Day Risk-Free Guarantee</h3>
+    <p>Try it. Paint it.</p>
+    <p>Experience the process for yourself.</p>
+    <p>If for any reason this workshop doesn't feel right for you…</p>
+    <p>Or if you simply change your mind…</p>
+    <p>Email us within 30 days and we'll issue a full refund within 24 hours.</p>
+    <p>No explanations required.</p>
+    <p>No awkward conversations.</p>
+    <p>There's absolutely no risk in giving yourself one creative weekend.</p>
+    <p>You either create something you love…</p>
+    <p>Or you get your money back.</p>
+    <img class="page-img-sm" src="images/guarantee.webp" alt="30-day money-back guarantee">
+  </div>
+</div>
+
+<!-- BONUSES -->
+<div class="section">
+  <div class="content">
+    <h2>And to make your experience even better…</h2>
+    <p>When you join today, you'll also unlock these exclusive bonuses, all included at no extra cost.</p>
+
+    <hr class="divider">
+
+    <span class="module-header">Bonus 1</span>
+    <h2>The Perfect Background Guide</h2>
+    <p>Your painting won't just look "nice"… it will look finished and display-worthy.</p>
+    <ul class="feature-list">
+      <li><strong>How to paint a smooth, even background (without streaks, patchiness, or overworking your paper)</strong></li>
+      <li><strong>Three simple background styles that instantly elevate your butterfly even if you're a complete beginner</strong></li>
+      <li><strong>The one small adjustment that makes your colors pop instead of looking flat or dull</strong></li>
+    </ul>
+    <img class="page-img-sm" src="images/bonus-1-butterfly.webp" alt="Bonus 1">
+
+    <hr class="divider">
+
+    <span class="module-header">Bonus 2</span>
+    <h2>Frame and Display Your Artwork</h2>
+    <p>So your butterfly doesn't end up in a drawer. It ends up on your wall.</p>
+    <img class="page-img-sm" src="images/bonus-2-butterfly.webp" alt="Bonus 2">
+    <ul class="feature-list">
+      <li><strong>How to frame or present your painting so it actually looks like real artwork (not a beginner project)</strong></li>
+      <li><strong>The simple finishing touches that make your piece feel complete and "gallery-ready"</strong></li>
+      <li><strong>Where and how to display your butterfly so it naturally draws attention (and compliments)</strong></li>
+    </ul>
+  </div>
+</div>
+
+<!-- INCLUDED RECAP 1 -->
+<div class="price-section" style="background:#fff8f5;">
+  <div class="content">
+    <h3><em>Here's everything you get when you join today:</em></h3>
+    <img class="page-img-sm" src="images/mock-up-butterfly.webp" alt="Workshop mockup">
+    <p>A complete creative experience from your very first brushstroke to the moment you hang your butterfly on your wall.</p>
+    <ul class="included-list">
+      <li><span class="check">✓</span><span><strong>The Rainbow Mosaic Butterfly Workshop</strong> (<s>$97</s> → <strong>$47</strong>)</span></li>
+      <li><span class="check">✓</span><span><strong>Bonus 1 - The Perfect Background Guide</strong> (<s>$19</s> → <strong>FREE</strong>)</span></li>
+      <li><span class="check">✓</span><span><strong>Bonus 2 - Frame &amp; Display Your Artwork Guide</strong> (<s>$19</s> → <strong>FREE</strong>)</span></li>
+    </ul>
+    <p class="total-value">That's $135 in total value.</p>
+    <p>Today, you get everything for just <strong>$47</strong></p>
+
+    <h3>Click below to join the workshop at the special launch price.</h3>
+    <p>– Normally <s>$97</s> –</p>
+    <h3>Now Only $47</h3>
+    <p><strong>One-time purchase. Lifetime access.</strong></p>
+    <a class="btn-cta" href="https://www.craftmadeeasy.com/checkout-rainbow-mosaic-butterfly">Start My Butterfly Workshop</a>
+    <p class="btn-note">*If you click the button and the next page doesn't load, then the $47 offer no longer exists.</p>
+    <p>30-day money-back guarantee</p>
+    <div class="payment-row">
+      <img src="images/payment.png" alt="Payment methods">
+      <img src="images/secure.png" alt="Secure payment">
+    </div>
+  </div>
+</div>
+
+<!-- BONUS 3 (TIMER) -->
+<div class="section">
+  <div class="content">
+    <p><strong>One last thing... but only if you beat the timer</strong></p>
+    <span class="module-header">Special Bonus</span>
+    <h2>The Color Confidence Guide</h2>
+    <p>The color secrets I usually reserve for my private students…</p>
+    <img class="page-img-sm" src="images/bonus-3-butterfly.webp" alt="Bonus 3 - Color Confidence">
+    <ul class="feature-list">
+      <li><strong>How to choose color combinations that look beautiful every time even if you've never learned color theory</strong></li>
+      <li><strong>The simple harmony rules artists use to avoid muddy, clashing colors</strong></li>
+      <li><strong>How to adjust your palette so your butterfly looks vibrant, balanced and uniquely yours</strong></li>
+    </ul>
+  </div>
+</div>
+
+<!-- INCLUDED RECAP 2 -->
+<div class="price-section" style="background:#fff8f5;">
+  <div class="content">
+    <h3><em>Here's a quick recap of everything you're getting today:</em></h3>
+    <img class="page-img-sm" src="images/mock-up-butterfly.webp" alt="Workshop mockup">
+    <p>A complete creative experience from your very first brushstroke to the moment you hang your butterfly on your wall.</p>
+    <ul class="included-list">
+      <li><span class="check">✓</span><span><strong>The Rainbow Mosaic Butterfly Workshop</strong> (<s>$97</s> → <strong>$47</strong>)</span></li>
+      <li><span class="check">✓</span><span><strong>Bonus 1 - The Perfect Background Guide</strong> (<s>$19</s> → <strong>FREE</strong>)</span></li>
+      <li><span class="check">✓</span><span><strong>Bonus 2 - Frame &amp; Display Your Artwork Guide</strong> (<s>$19</s> → <strong>FREE</strong>)</span></li>
+      <li><span class="check">✓</span><span><strong>Extra Bonus - The Color Confidence Guide</strong> (<s>$27</s> → <strong>FREE</strong>)</span></li>
+    </ul>
+    <p class="total-value">That's $162 in total value.</p>
+    <p>Today, you get everything for just <strong>$47</strong></p>
+
+    <h3>Click below to join the workshop at the special launch price.</h3>
+    <p>– Normally <s>$97</s> –</p>
+    <h3>Now Only $47</h3>
+    <p><strong>One-time purchase. Lifetime access.</strong></p>
+    <a class="btn-cta" href="https://www.craftmadeeasy.com/checkout-rainbow-mosaic-butterfly">Start My Butterfly Workshop</a>
+    <p class="btn-note">*If you click the button and the next page doesn't load, then the $47 offer no longer exists.</p>
+    <p>30-day money-back guarantee</p>
+    <div class="payment-row">
+      <img src="images/payment.png" alt="Payment methods">
+      <img src="images/secure.png" alt="Secure payment">
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="section">
+  <div class="content">
+    <h2>FAQ</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Do I need any prior painting experience?</div>
+      <div class="faq-a">Not at all. This workshop was designed specifically for complete beginners. Every step is explained clearly, and the Peel and Reveal Technique makes the process forgiving and stress-free, even if you've never held a paintbrush before.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What if I'm not creative or artistic?</div>
+      <div class="faq-a">Creativity isn't something you either have or you don't have. It's something you discover when you have the right method. The grid system and step-by-step guidance mean you're never staring at a blank page wondering what to do next.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">I've tried art classes before and got discouraged. How is this different?</div>
+      <div class="faq-a">Most art classes assume a baseline of skill and move too quickly. This workshop goes at your pace, breaks everything into small manageable steps, and uses a technique that protects your work as you go. There's no pressure to be perfect.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What if I make a mistake while painting?</div>
+      <div class="faq-a">Mistakes are part of the process. The Peel and Reveal Technique protects your mosaic lines while you paint, so small slips won't ruin your piece. And since the workshop is self-paced, you can always pause, rewind, and try again.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">How much time do I need?</div>
+      <div class="faq-a">The workshop is designed to fit into a relaxed weekend. You can spread it across a Saturday and Sunday or go through it one module at a time whenever you have a free moment. There's no deadline and no pressure.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What materials do I need?</div>
+      <div class="faq-a">Basic acrylic paints, a few brushes, smooth 200–300g/m² (90-140lb) paper, a pencil, an eraser, and drawing gum. Everything is covered in Module 1 with a clear materials list. Nothing fancy, nothing expensive.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">How is the workshop delivered?</div>
+      <div class="faq-a">Everything is online and self-paced. You get instant access to step-by-step video lessons you can watch on your laptop, tablet or phone whenever you like.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Is this a one-time purchase?</div>
+      <div class="faq-a">Yes. You pay once and get lifetime access. No subscriptions, no recurring charges, no hidden fees. Come back to it anytime, whether that's next weekend or next year.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">When do I get access?</div>
+      <div class="faq-a">Immediately after purchase. You'll receive a confirmation email with simple instructions to access the workshop within minutes.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What if I want a refund?</div>
+      <div class="faq-a">No problem. If you're not happy for any reason within 30 days, just send us an email and we'll issue a full refund within 24 hours. No forms, no explanations required.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Is it safe to purchase online?</div>
+      <div class="faq-a">Yes. The checkout is fully secured and encrypted. Your payment information is never stored.</div>
+    </div>
+  </div>
+</div>
+
+<!-- FINAL RECAP -->
+<div class="price-section" style="background:#fff8f5;">
+  <div class="content">
+    <h3><em>Here's everything you get when you join today:</em></h3>
+    <img class="page-img-sm" src="images/mock-up-butterfly.webp" alt="Workshop mockup">
+    <p>A complete creative experience from your very first brushstroke to the moment you hang your butterfly on your wall.</p>
+    <ul class="included-list">
+      <li><span class="check">✓</span><span><strong>The Rainbow Mosaic Butterfly Workshop</strong> (<s>$97</s> → <strong>$47</strong>)</span></li>
+      <li><span class="check">✓</span><span><strong>Bonus 1 - The Perfect Background Guide</strong> (<s>$19</s> → <strong>FREE</strong>)</span></li>
+      <li><span class="check">✓</span><span><strong>Bonus 2 - Frame &amp; Display Your Artwork Guide</strong> (<s>$19</s> → <strong>FREE</strong>)</span></li>
+      <li><span class="check">✓</span><span><strong>Extra Bonus - The Color Confidence Guide</strong> (<s>$27</s> → <strong>FREE</strong>)</span></li>
+    </ul>
+    <p class="total-value">That's $162 in total value.</p>
+    <p>Today, you get everything for just <strong>$47</strong></p>
+
+    <h3>Click below to join the workshop at the special launch price.</h3>
+    <p>– Normally <s>$97</s> –</p>
+    <h3>Now Only $47</h3>
+    <p><strong>One-time purchase. Lifetime access.</strong></p>
+    <a class="btn-cta" href="https://www.craftmadeeasy.com/checkout-rainbow-mosaic-butterfly">Start My Butterfly Workshop</a>
+    <p class="btn-note">*If you click the button and the next page doesn't load, then the $47 offer no longer exists.</p>
+    <p>30-day money-back guarantee</p>
+    <div class="payment-row">
+      <img src="images/payment.png" alt="Payment methods">
+      <img src="images/secure.png" alt="Secure payment">
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <img src="images/logo.webp" alt="Craft Made Easy">
+  <p style="font-size:14px; color:#999;">© 2026 Craft Made Easy — All rights reserved</p>
+  <div class="footer-links">
+    <a href="https://www.themacramelab.com/heartnecklace-privacy">Policies</a>
+    <a href="https://www.themacramelab.com/heartnecklace-contact">Contact</a>
+  </div>
+  <p style="font-size:12px; color:#ccc; margin-top:12px;">Craft Made Easy - Creative Craft Courses</p>
+</footer>
+
+<script>
+// Countdown timer - set to 1h 15m from page load
+const endTime = Date.now() + (1 * 60 + 15) * 60 * 1000;
+
+function updateCountdown() {
+  const now = Date.now();
+  const diff = Math.max(0, endTime - now);
+  const days = Math.floor(diff / 86400000);
+  const hours = Math.floor((diff % 86400000) / 3600000);
+  const mins = Math.floor((diff % 3600000) / 60000);
+  const secs = Math.floor((diff % 60000) / 1000);
+  document.getElementById('cd-days').textContent = String(days).padStart(2, '0');
+  document.getElementById('cd-hours').textContent = String(hours).padStart(2, '0');
+  document.getElementById('cd-mins').textContent = String(mins).padStart(2, '0');
+  document.getElementById('cd-secs').textContent = String(secs).padStart(2, '0');
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(q => {
+  q.addEventListener('click', () => {
+    const item = q.parentElement;
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  });
+});
+</script>
+
+</body>
+</html>
