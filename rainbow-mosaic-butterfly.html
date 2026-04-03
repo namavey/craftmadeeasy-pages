@@ -19,7 +19,7 @@ body {
 /* COUNTDOWN BAR */
 .countdown-bar {
   background: #111111;
-  padding: 10px 20px;
+  padding: 6px 20px;
   text-align: center;
   position: sticky;
   top: 0;
@@ -34,25 +34,25 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 52px;
+  min-width: 36px;
 }
 .cd-num {
   font-family: 'Inter', sans-serif;
-  font-size: 24px;
+  font-size: 16px;
   font-weight: 700;
   color: #e8622a;
   letter-spacing: 0.05em;
   line-height: 1;
 }
 .cd-label {
-  font-size: 10px;
+  font-size: 7px;
   color: #ffffff;
   letter-spacing: 0.12em;
   margin-top: 3px;
   font-weight: 400;
 }
 .cd-sep {
-  font-size: 22px;
+  font-size: 14px;
   color: #e8622a;
   font-weight: 700;
   padding-bottom: 12px;
@@ -438,8 +438,6 @@ em { font-style: italic; }
 <!-- COUNTDOWN BAR -->
 <div class="countdown-bar">
   <div class="countdown-inner">
-    <div class="cd-unit"><span class="cd-num" id="cd-days">00</span><span class="cd-label">DAYS</span></div>
-    <span class="cd-sep">:</span>
     <div class="cd-unit"><span class="cd-num" id="cd-hours">01</span><span class="cd-label">HOURS</span></div>
     <span class="cd-sep">:</span>
     <div class="cd-unit"><span class="cd-num" id="cd-mins">14</span><span class="cd-label">MINUTES</span></div>
@@ -849,7 +847,6 @@ function updateCountdown() {
   const hours = Math.floor((diff % 86400000) / 3600000);
   const mins = Math.floor((diff % 3600000) / 60000);
   const secs = Math.floor((diff % 60000) / 1000);
-  document.getElementById('cd-days').textContent = String(days).padStart(2, '0');
   document.getElementById('cd-hours').textContent = String(hours).padStart(2, '0');
   document.getElementById('cd-mins').textContent = String(mins).padStart(2, '0');
   document.getElementById('cd-secs').textContent = String(secs).padStart(2, '0');
