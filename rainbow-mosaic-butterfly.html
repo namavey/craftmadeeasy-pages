@@ -15,6 +15,7 @@
 <link rel="preload" href="fonts/playfair-display-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/inter-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="images/moodsetter-butterfly.webp" as="image" type="image/webp">
 <link rel="icon" type="image/webp" href="images/logo.webp">
 
 <style>
@@ -897,8 +898,10 @@ function updateCountdown() {
   document.getElementById('cd-secs').textContent = String(secs).padStart(2, '0');
 }
 
-updateCountdown();
-setInterval(updateCountdown, 1000);
+requestAnimationFrame(() => {
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+});
 
 // FAQ accordion
 document.querySelectorAll('.faq-q').forEach(q => {
