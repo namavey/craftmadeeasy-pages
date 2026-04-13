@@ -20,19 +20,30 @@
 <link rel="icon" type="image/webp" href="images/logo.webp">
 
 <script>
-  (function(w, d, u, k) {
-    w.ServerTrack = w.ServerTrack || {};
-    w.serverTrackQueue = [];
-    w.st = function() { w.serverTrackQueue.push(arguments); };
-    var s = d.createElement('script'); s.async = 1;
-    var randomPath = Math.random().toString(36).substring(2, 15);
-    s.src = u + '/lib/' + randomPath + '?key=' + k;
-    var h = d.getElementsByTagName('script')[0]; h.parentNode.insertBefore(s, h);
-    
-    // Déclenchement du signal de vue de contenu
-    w.st('track', 'ViewContent');
-    
-  })(window, document, 'https://data.craftmadeeasy.com', 'VNFR4MORGJEHITLDLWHLNOOLM3W0YTYYNGZKAQTM');
+(function(w, d, u, k) {
+  w.ServerTrack = w.ServerTrack || {};
+  w.serverTrackQueue = w.serverTrackQueue || [];
+  w.st = function() { w.serverTrackQueue.push(arguments); };
+  var s = d.createElement('script');
+  s.async = 1;
+  var randomPath = Math.random().toString(36).substring(2, 15);
+  s.src = u + '/lib/' + randomPath + '?key=' + k;
+  var h = d.getElementsByTagName('script')[0];
+  h.parentNode.insertBefore(s, h);
+})(window, document, 'https://data.craftmadeeasy.com', 'VNFR4MORGJEHITLDLWHLNOOLM3W0YTYYNGZKAQTM');
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  st('track', 'ViewContent', {
+    content_ids: ['rainbow-mosaic-butterfly'],
+    content_type: 'product',
+    content_name: 'Rainbow Mosaic Butterfly',
+    content_category: 'Workshop',
+    value: 47.00,
+    currency: 'USD',
+    price: 47.00
+  });
+});
 </script>
 
 <style>
