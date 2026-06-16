@@ -15,7 +15,7 @@
 <link rel="preload" href="fonts/playfair-display-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/inter-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="images/moodsetter-heart-necklace.webp" as="image" type="image/webp" fetchpriority="high">
+<link rel="preload" href="images/moodsetter-heart-necklace.webp" as="image" type="image/webp">
 <link rel="icon" type="image/webp" href="images/logo.webp">
 
 <script>
@@ -34,7 +34,7 @@
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   st('track', 'ViewContent', {
-    content_ids: ['heart-necklace-course'],
+    content_ids: ['heart-necklace-course-no-bonus'],
     content_type: 'product',
     content_name: 'The Heart Necklace Course',
     content_category: 'Course',
@@ -54,48 +54,6 @@ body {
   color: #2c2c2c;
   font-size: 20px;
   line-height: 1.6;
-}
-
-/* COUNTDOWN BAR */
-.countdown-bar {
-  background: #111111;
-  padding: 10px 20px;
-  text-align: center;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-.countdown-inner {
-  display: inline-flex;
-  gap: 8px;
-  align-items: center;
-}
-.cd-unit {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-width: 52px;
-}
-.cd-num {
-  font-family: 'Inter', sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: #e8622a;
-  letter-spacing: 0.05em;
-  line-height: 1;
-}
-.cd-label {
-  font-size: 12px;
-  color: #cccccc;
-  letter-spacing: 0.12em;
-  margin-top: 3px;
-  font-weight: 400;
-}
-.cd-sep {
-  font-size: 22px;
-  color: #e8622a;
-  font-weight: 700;
-  padding-bottom: 12px;
 }
 
 /* CONTENT WRAPPER */
@@ -215,13 +173,8 @@ strong { font-weight: 600; }
   text-align: center;
 }
 
-.cta-box h3 {
-  text-align: center;
-}
-
-.cta-box p {
-  text-align: center;
-}
+.cta-box h3 { text-align: center; }
+.cta-box p { text-align: center; }
 
 .btn-cta {
   display: block;
@@ -243,47 +196,8 @@ strong { font-weight: 600; }
 }
 .btn-cta:hover { background: rgb(210, 82, 28); }
 
-.btn-note {
-  font-size: 14px;
-  color: #888;
-  margin-top: -12px;
-  margin-bottom: 16px;
-}
-
 /* PRICE SECTION */
-.price-section {
-  padding: 40px 0;
-}
-
-.price-was {
-  font-size: 28px;
-  color: #888;
-  text-decoration: line-through;
-  margin-bottom: 4px;
-  display: block;
-}
-
-.price-label {
-  font-size: 22px;
-  font-weight: 400;
-  color: #2c2c2c;
-  margin-bottom: 8px;
-}
-
-.price-now {
-  font-family: 'Playfair Display', serif;
-  font-size: 64px;
-  font-weight: 700;
-  color: #e8622a;
-  line-height: 1;
-  margin: 8px 0;
-}
-
-.price-terms {
-  font-size: 17px;
-  color: #555;
-  margin-bottom: 24px;
-}
+.price-section { padding: 40px 0; }
 
 .highlight { color: #e8622a; }
 
@@ -296,31 +210,6 @@ strong { font-weight: 600; }
   color: #e8622a;
   margin-bottom: 6px;
   display: block;
-}
-
-/* GUARANTEE */
-.guarantee-box {
-  background: #ffffff;
-  border: 1px solid #eee;
-  border-radius: 12px;
-  padding: 48px 40px;
-  text-align: center;
-  margin: 40px auto;
-}
-
-/* PAYMENT IMGS */
-.payment-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin: 20px auto;
-}
-.payment-row img {
-  height: 36px;
-  max-width: 180px;
-  object-fit: contain;
 }
 
 /* FAQ */
@@ -388,12 +277,6 @@ strong { font-weight: 600; }
   margin-right: auto;
 }
 
-.footer-links {
-  font-size: 14px;
-  color: #767676;
-  margin-top: 8px;
-}
-
 .footer-links a {
   color: #767676;
   text-decoration: none;
@@ -422,7 +305,6 @@ strong { font-weight: 600; }
 }
 
 .included-list li:last-child { border-bottom: none; }
-
 .included-list .check { color: rgb(232, 98, 42); font-size: 18px; flex-shrink: 0; }
 
 /* TOTAL VALUE */
@@ -434,7 +316,6 @@ strong { font-weight: 600; }
   text-align: center;
 }
 
-/* ITALIC */
 em { font-style: italic; }
 
 /* RESPONSIVE */
@@ -442,7 +323,6 @@ em { font-style: italic; }
   h1 { font-size: 32px; }
   h2 { font-size: 26px; }
   h3 { font-size: 22px; }
-  .price-now { font-size: 48px; }
   .btn-cta { font-size: 26px !important; width: 100%; max-width: 100%; box-sizing: border-box; }
   .cta-box { padding: 24px 16px; }
   .section { padding: 16px 0; }
@@ -463,17 +343,6 @@ em { font-style: italic; }
     </script>
 </head>
 <body>
-
-<!-- COUNTDOWN BAR -->
-<div class="countdown-bar">
-  <div class="countdown-inner">
-    <div class="cd-unit"><span class="cd-num" id="cd-hours">01</span><span class="cd-label">HOURS</span></div>
-    <span class="cd-sep">:</span>
-    <div class="cd-unit"><span class="cd-num" id="cd-mins">14</span><span class="cd-label">MINUTES</span></div>
-    <span class="cd-sep">:</span>
-    <div class="cd-unit"><span class="cd-num" id="cd-secs">59</span><span class="cd-label">SECONDS</span></div>
-  </div>
-</div>
 
 <!-- HERO -->
 <main>
@@ -520,8 +389,8 @@ em { font-style: italic; }
 <div class="section">
   <div class="content">
     <h2>Introducing The Heart Necklace Course</h2>
-    <img class="page-img-sm" src="images/mock-up-heart-necklace.webp" alt="The Heart Necklace Course - online course on all devices" width="500" height="375" loading="lazy">
-    <p style="text-align:center; font-family:'Playfair Display', serif; font-size:24px; font-weight:400; color:#2c2c2c; line-height:1.4; margin-bottom:24px;"><em>The complete beginner-friendly system for creating a stunning handmade macramé necklace, step by step, with just cord, beads, and two knots.</em></p>
+    <img class="page-img-sm" src="images/mock-up-heart-necklace.webp" alt="The Heart Necklace Course - online course on all devices" width="500" height="375">
+    <p style="text-align:center; font-family:'Playfair Display', serif; font-size:24px; font-weight:400; color:#2c2c2c; line-height:1.4; margin-bottom:24px;"><em>The complete beginner-friendly system for creating a stunning handmade macrame necklace, step by step, with just cord, beads, and two knots.</em></p>
     <ul class="feature-list">
       <li>🎬 Step-by-step video walkthroughs</li>
       <li>📱 Access on mobile, tablet, and computer</li>
@@ -539,7 +408,7 @@ em { font-style: italic; }
     <span class="module-header">Module 1</span>
     <h2>Foundations. Set Up and Learn Your Two Knots.</h2>
     <p>Before you touch a bead, you'll understand exactly what you're working with and why. This module walks you through the two knots that build this entire necklace, practiced in isolation until they feel natural in your hands. By the end, you'll have made your first small swatch — and you'll already know you can do this.</p>
-    <img class="page-img-sm" src="images/module-1-heart-necklace.webp" alt="Module 1 - Macramé cord, beads and tools laid out for setup" width="500" height="375" loading="lazy">
+    <img class="page-img-sm" src="images/module-1-heart-necklace.webp" alt="Module 1 - Macrame cord, beads and tools laid out for setup" width="500" height="375">
     <ul class="feature-list">
       <li><strong>The lark's head mount:</strong> how to anchor your cord cleanly every single time</li>
       <li><strong>The double half hitch knot:</strong> the one knot that creates every curve, every heart shape, every flowing line in this necklace</li>
@@ -554,7 +423,7 @@ em { font-style: italic; }
     <span class="module-header">Module 2</span>
     <h2>Your First Heart. Create a Single Complete Heart Motif.</h2>
     <p>This is where it clicks. You'll take everything from Module 1 and use it to create one complete heart from start to finish. Every curve, every point, every line of texture — built knot by knot in a logical sequence you can follow without second-guessing. You'll end this module holding something that looks like jewelry.</p>
-    <img class="page-img-sm" src="images/module-2-heart-necklace.webp" alt="Module 2 - A single finished burgundy macramé heart motif" width="500" height="375" loading="lazy">
+    <img class="page-img-sm" src="images/module-2-heart-necklace.webp" alt="Module 2 - A single finished burgundy macrame heart motif" width="500" height="375">
     <ul class="feature-list">
       <li>How to <strong>map the heart shape</strong> before you start so you always know where you're going</li>
       <li>The exact <strong>cord length formula</strong> so you never run short mid-motif</li>
@@ -562,14 +431,13 @@ em { font-style: italic; }
       <li>You'll complete <strong>one full heart motif</strong>, ready to build on in Module 3</li>
     </ul>
 
-
     <hr class="divider">
 
-    <!-- MODULE 4 -->
+    <!-- MODULE 3 -->
     <span class="module-header">Module 3</span>
     <h2>Building the Collar. Connect Multiple Hearts Into a Necklace Shape.</h2>
     <p>One heart is a motif. Seven hearts connected with intention is a necklace. This module teaches you how to join your pieces so the collar curves naturally at the neck, stays flat when worn, and looks deliberate and professional. You'll see the full shape of your necklace emerge for the first time.</p>
-    <img class="page-img-sm" src="images/module-3-heart-necklace.webp" alt="Module 3 - Five connected heart motifs forming the collar shape" width="500" height="375" loading="lazy">
+    <img class="page-img-sm" src="images/module-3-heart-necklace.webp" alt="Module 3 - Five connected heart motifs forming the collar shape" width="500" height="375">
     <ul class="feature-list">
       <li><strong>The joining technique</strong> that keeps each heart angled correctly as the collar curves</li>
       <li>How to <strong>plan your layout</strong> before you start connecting so nothing needs to be undone</li>
@@ -580,11 +448,11 @@ em { font-style: italic; }
 
     <hr class="divider">
 
-    <!-- MODULE 5 -->
+    <!-- MODULE 4 -->
     <span class="module-header">Module 4</span>
     <h2>The Centerpiece. Craft the Statement Pendant Heart.</h2>
     <p>The centerpiece pendant is the soul of this necklace. It's larger, more intricate, and features the open teardrop design with a single pearl drop that makes the whole piece look like fine jewelry. This module breaks it down into a clear sequence so it never feels overwhelming.</p>
-    <img class="page-img-sm" src="images/module-4-heart-necklace.webp" alt="Module 4 - The large open-heart centerpiece pendant in progress" width="500" height="375" loading="lazy">
+    <img class="page-img-sm" src="images/module-4-heart-necklace.webp" alt="Module 4 - The large open-heart centerpiece pendant in progress" width="500" height="375">
     <ul class="feature-list">
       <li>How to <strong>scale up a heart motif</strong> without losing the proportions that make it look right</li>
       <li>The technique for creating the <strong>open teardrop frame</strong> at the base of the pendant</li>
@@ -595,11 +463,11 @@ em { font-style: italic; }
 
     <hr class="divider">
 
-    <!-- MODULE 6 -->
+    <!-- MODULE 5 -->
     <span class="module-header">Module 5</span>
     <h2>Finishing Touches. Complete, Clasp, and Wear Your Necklace.</h2>
     <p>The final step. You'll attach the centerpiece to the collar, add the clasp and finishing knots, and trim everything clean. By the end of this lesson, your necklace is done. Put it on.</p>
-    <img class="page-img-sm" src="images/module-5-heart-necklace.webp" alt="Module 5 - Fastening the completed burgundy heart necklace around a neck" width="500" height="375" loading="lazy">
+    <img class="page-img-sm" src="images/module-5-heart-necklace.webp" alt="Module 5 - Fastening the completed burgundy heart necklace around a neck" width="500" height="375">
     <ul class="feature-list">
       <li>How to <strong>attach the centerpiece pendant</strong> to the collar so it sits centered and secure</li>
       <li>The <strong>finishing knot sequence</strong> that locks everything in place without adding visible bulk</li>
@@ -626,7 +494,7 @@ em { font-style: italic; }
       <p class="highlight" style="font-family:'Playfair Display', serif; font-size:48px; font-weight:700; line-height:1.2; margin-bottom:20px;">Now Only $47</p>
       <p><strong>One-time purchase. Lifetime access.</strong></p>
       <a class="btn-cta" href="https://pay.craftmadeeasy.com/checkout-heart-necklace-course" aria-label="Yes! I Want to Make This Necklace - Join at the special launch price of $47">Yes! I Want to Make This Necklace</a>
-      <p><em>Get instant access to all 6 modules and start creating today.</em></p>
+      <p><em>Get instant access to all 5 modules and start creating today.</em></p>
       <p style="font-size:15px; color:#888;">P.S. If the next page doesn't load... then you're too late.</p>
       <div style="text-align:center; margin-top:16px;">
         <img src="images/payment.webp" alt="Payment methods accepted" width="500" height="100" style="max-width:220px; height:auto; display:block; margin:0 auto 12px;">
@@ -654,7 +522,7 @@ em { font-style: italic; }
   <div class="content">
     <h2>And to help you go even further…</h2>
     <p>I want to make sure you don't just enroll — I want you to <em>start</em>, stay motivated, and finish with something you're genuinely proud of. So I've put together a few extra resources to make the whole experience easier, from the very first supply run to the moment you share your finished piece.</p>
-    <p style="text-align:center;"><strong>Get 3 FREE Bonuses If You Join Now</strong></p>
+    <p style="text-align:center;"><strong>Get 3 FREE Bonuses When You Join</strong></p>
 
     <hr class="divider">
 
@@ -700,11 +568,11 @@ em { font-style: italic; }
   </div>
 </div>
 
-<!-- INCLUDED RECAP 1 -->
+<!-- INCLUDED RECAP -->
 <div class="price-section" style="background:#ffffff;">
   <div class="content">
     <h2>Here's everything you get when you join today:</h2>
-    <img class="page-img-sm" src="images/mock-up-heart-necklace.webp" alt="The Heart Necklace Course - course and bonuses on all devices" width="500" height="375" loading="lazy">
+    <img class="page-img-sm" src="images/mock-up-heart-necklace.webp" alt="The Heart Necklace Course - course and bonuses on all devices" width="500" height="375">
     <p>Everything you need to go from a blank workspace... to a necklace you're proud to wear or give.</p>
     <ul class="included-list">
       <li><span class="check">✓</span><span><strong>The Heart Necklace Course</strong> (<s>$97</s> &rarr; <strong class="highlight">$47</strong>)</span></li>
@@ -727,65 +595,7 @@ em { font-style: italic; }
       <p class="highlight" style="font-family:'Playfair Display', serif; font-size:48px; font-weight:700; line-height:1.2; margin-bottom:20px;">Now Only $47</p>
       <p><strong>One-time purchase. Lifetime access.</strong></p>
       <a class="btn-cta" href="https://pay.craftmadeeasy.com/checkout-heart-necklace-course" aria-label="Yes! I Want to Make This Necklace - Join at the special launch price of $47">Yes! I Want to Make This Necklace</a>
-      <p><em>Get instant access to all 6 modules and start creating today.</em></p>
-      <p style="font-size:15px; color:#888;">P.S. If the next page doesn't load... then you're too late.</p>
-      <div style="text-align:center; margin-top:16px;">
-        <img src="images/payment.webp" alt="Payment methods accepted" width="500" height="100" style="max-width:220px; height:auto; display:block; margin:0 auto 12px;">
-        <img src="images/secure.webp" alt="Secure payment" width="500" height="100" style="max-width:180px; height:auto; display:block; margin:0 auto;">
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- TIMER BONUS -->
-<div class="section">
-  <div class="content">
-    <p style="text-align:center; font-size:24px;"><strong>But why stop here?</strong></p>
-    <p>You're about to learn to make a stunning necklace. But imagine finishing it and being able to say: "I also made the earrings." That's not just a necklace anymore. That's a complete set. And that bonus is only available if you enroll before the timer runs out.</p>
-    <span class="module-header">Special Bonus — Available Before the Timer Ends Only</span>
-    <h2>The Matching Heart Earrings</h2>
-    <p>Turn your necklace into a full jewelry set. This bonus walks you through making a pair of heart earrings using the exact same two knots from the course — so you already know everything you need. The result is an elegant, coordinated set that looks like it came from a boutique.</p>
-    <img class="page-img-sm" src="images/bonus-timer-heart-necklace.webp" alt="The Matching Heart Earrings - a complete macrame necklace and earring set" width="500" height="375">
-    <ul class="feature-list">
-      <li>The exact <strong>cord lengths and knot count</strong> for a single heart earring motif</li>
-      <li>How to attach your finished heart to an <strong>earring hook cleanly</strong> without visible knots</li>
-      <li>A simplified <strong>bead placement for earrings</strong> so they stay lightweight and comfortable to wear all day</li>
-      <li>How to make both earrings <strong>perfectly symmetrical</strong> without measuring twice</li>
-    </ul>
-    <p style="text-align:center;"><strong>Value: <s>$19</s> &rarr; <span class="highlight">FREE</span></strong></p>
-    <p style="text-align:center;"><strong>P.S. This bonus is only available if you enroll before the timer ends. After that, it's gone.</strong></p>
-  </div>
-</div>
-
-<!-- INCLUDED RECAP 2 -->
-<div class="price-section" style="background:#ffffff;">
-  <div class="content">
-    <h2>Here's a quick recap of everything you're getting today:</h2>
-    <img class="page-img-sm" src="images/mock-up-heart-necklace.webp" alt="The Heart Necklace Course - full course and all bonuses" width="500" height="375" loading="lazy">
-    <p>Everything you need to go from a blank workspace... to a necklace you're proud to wear or give.</p>
-    <ul class="included-list">
-      <li><span class="check">✓</span><span><strong>The Heart Necklace Course</strong> (<s>$97</s> &rarr; <strong class="highlight">$47</strong>)</span></li>
-      <li><span class="check" style="padding-left:16px;">&#9658;</span><span>Module 1: Foundations. Set Up and Learn Your Two Knots.</span></li>
-      <li><span class="check" style="padding-left:16px;">&#9658;</span><span>Module 2: Your First Heart. Create a Single Complete Heart Motif.</span></li>
-      <li><span class="check" style="padding-left:16px;">&#9658;</span><span>Module 3: Building the Collar. Connect Multiple Hearts Into Shape.</span></li>
-      <li><span class="check" style="padding-left:16px;">&#9658;</span><span>Module 4: The Centerpiece. Craft the Statement Pendant Heart.</span></li>
-      <li><span class="check" style="padding-left:16px;">&#9658;</span><span>Module 5: Finishing Touches. Complete, Clasp, and Wear Your Necklace.</span></li>
-      <li><span class="check">✓</span><span><strong>Bonus 1: The Macrame Jewelry Starter Kit Guide</strong> (<s>$17</s> &rarr; <strong class="highlight">FREE</strong>)</span></li>
-      <li><span class="check">✓</span><span><strong>Bonus 2: The Colors, Cords and Beads Guide</strong> (<s>$19</s> &rarr; <strong class="highlight">FREE</strong>)</span></li>
-      <li><span class="check">✓</span><span><strong>Bonus 3: Photograph Your Jewelry Like a Professional Designer</strong> (<s>$15</s> &rarr; <strong class="highlight">FREE</strong>)</span></li>
-      <li><span class="check">✓</span><span><strong>Timer Bonus: The Matching Heart Earrings</strong> (<s>$19</s> &rarr; <strong class="highlight">FREE</strong>)</span></li>
-    </ul>
-    <p style="text-align:left;">So you're not guessing... struggling... or starting over.</p>
-    <p class="total-value">That's $167 in total value.</p>
-    <p style="text-align:center;">Today, you get everything for just <strong class="highlight">$47</strong></p>
-
-    <div class="cta-box">
-      <p><strong>This is your moment to make something you're proud of.</strong></p>
-      <p>Normally <s>$97</s></p>
-      <p class="highlight" style="font-family:'Playfair Display', serif; font-size:48px; font-weight:700; line-height:1.2; margin-bottom:20px;">Now Only $47</p>
-      <p><strong>One-time purchase. Lifetime access.</strong></p>
-      <a class="btn-cta" href="https://pay.craftmadeeasy.com/checkout-heart-necklace-course" aria-label="Yes! I Want to Make This Necklace - Join at the special launch price of $47">Yes! I Want to Make This Necklace</a>
-      <p><em>Get instant access to the full course, all 3 bonuses, and your timer bonus — starting today.</em></p>
+      <p><em>Get instant access to all 5 modules and start creating today.</em></p>
       <p style="font-size:15px; color:#888;">P.S. If the next page doesn't load... then you're too late.</p>
       <div style="text-align:center; margin-top:16px;">
         <img src="images/payment.webp" alt="Payment methods accepted" width="500" height="100" style="max-width:220px; height:auto; display:block; margin:0 auto 12px;">
@@ -827,7 +637,7 @@ em { font-style: italic; }
     </div>
     <div class="faq-item">
       <div class="faq-q">Can I make this necklace in a different color, or give it as a gift?</div>
-      <div class="faq-a">Absolutely. The Color and Cord Guide (your timer bonus) is built exactly for this. Students make this necklace in multiple colorways once they finish the course. And as a gift, it lands differently than anything you could buy in a store.</div>
+      <div class="faq-a">Absolutely. The Colors, Cords and Beads Guide (Bonus 2) is built exactly for this. Students make this necklace in multiple colorways once they finish the course. And as a gift, it lands differently than anything you could buy in a store.</div>
     </div>
   </div>
 </div>
@@ -837,7 +647,7 @@ em { font-style: italic; }
   <div class="content">
     <p style="text-align:center; font-size:22px;">If you've read this far, you already know you want to make this. Let's go.</p>
     <h2>Here's everything you're getting now for just $47:</h2>
-    <img class="page-img-sm" src="images/mock-up-heart-necklace.webp" alt="The Heart Necklace Course - full course and all bonuses" width="500" height="375" loading="lazy">
+    <img class="page-img-sm" src="images/mock-up-heart-necklace.webp" alt="The Heart Necklace Course - full course and all bonuses" width="500" height="375">
     <ul class="included-list">
       <li><span class="check">✓</span><span><strong>The Heart Necklace Course</strong> <em>(value: $97)</em></span></li>
       <li><span class="check" style="padding-left:16px;">&#9658;</span><span>Module 1: Foundations. Set Up and Learn Your Two Knots.</span></li>
@@ -848,9 +658,8 @@ em { font-style: italic; }
       <li><span class="check">✓</span><span><strong>Bonus 1: The Macrame Jewelry Starter Kit Guide</strong> <em>(value: $17)</em></span></li>
       <li><span class="check">✓</span><span><strong>Bonus 2: The Colors, Cords and Beads Guide</strong> <em>(value: $19)</em></span></li>
       <li><span class="check">✓</span><span><strong>Bonus 3: Photograph Your Jewelry Like a Professional Designer</strong> <em>(value: $15)</em></span></li>
-      <li><span class="check">✓</span><span><strong>Timer Bonus: The Matching Heart Earrings</strong> <em>(value: $19)</em></span></li>
     </ul>
-    <p class="total-value">Total Value: <s>$167</s></p>
+    <p class="total-value">Total Value: <s>$148</s></p>
     <p style="text-align:center;">Today, you get everything for just <strong class="highlight">$47</strong></p>
 
     <div class="cta-box">
@@ -859,7 +668,7 @@ em { font-style: italic; }
       <p class="highlight" style="font-family:'Playfair Display', serif; font-size:48px; font-weight:700; line-height:1.2; margin-bottom:20px;">Now Only $47</p>
       <p><strong>One-time purchase. Lifetime access.</strong></p>
       <a class="btn-cta" href="https://pay.craftmadeeasy.com/checkout-heart-necklace-course" aria-label="Yes! I Want to Make This Necklace - Join at the special launch price of $47">Yes! I Want to Make This Necklace</a>
-      <p><em>Get instant access to the full course, all 3 bonuses, and your timer bonus — starting today.</em></p>
+      <p><em>Get instant access to all 5 modules and start creating today.</em></p>
       <p style="font-size:15px; color:#888;">P.S. If the next page doesn't load... then you're too late.</p>
       <div style="text-align:center; margin-top:16px;">
         <img src="images/payment.webp" alt="Payment methods accepted" width="500" height="100" style="max-width:220px; height:auto; display:block; margin:0 auto 12px;">
@@ -883,44 +692,6 @@ em { font-style: italic; }
 </footer>
 
 <script>
-// Countdown timer - 1h15m with localStorage persistence
-const DURATION = (1 * 60 + 15) * 60 * 1000;
-const REDIRECT_URL = 'https://www.craftmadeeasy.com/heart-necklace-course-no-bonus';
-const STORAGE_KEY = 'hnc_countdown_end';
-
-let endTime = parseInt(localStorage.getItem(STORAGE_KEY));
-
-if (!endTime || isNaN(endTime)) {
-  endTime = Date.now() + DURATION;
-  localStorage.setItem(STORAGE_KEY, endTime);
-}
-
-if (Date.now() >= endTime) {
-  window.location.replace(REDIRECT_URL);
-}
-
-function updateCountdown() {
-  const now = Date.now();
-  const diff = Math.max(0, endTime - now);
-
-  if (diff === 0) {
-    window.location.replace(REDIRECT_URL);
-    return;
-  }
-
-  const hours = Math.floor(diff / 3600000);
-  const mins = Math.floor((diff % 3600000) / 60000);
-  const secs = Math.floor((diff % 60000) / 1000);
-  document.getElementById('cd-hours').textContent = String(hours).padStart(2, '0');
-  document.getElementById('cd-mins').textContent = String(mins).padStart(2, '0');
-  document.getElementById('cd-secs').textContent = String(secs).padStart(2, '0');
-}
-
-requestAnimationFrame(() => {
-  updateCountdown();
-  setInterval(updateCountdown, 1000);
-});
-
 // FAQ accordion
 document.querySelectorAll('.faq-q').forEach(q => {
   q.addEventListener('click', () => {

@@ -274,7 +274,7 @@
       <p>When you purchase one of our digital courses, you receive a personal, non-transferable, non-exclusive license to access and use the content for your own personal use only.</p>
 
       <h3>3. Course Content and Instructor</h3>
-      <p>Course content for the Rainbow Mosaic Butterfly Workshop and any future workshops is created and presented by Lucie, an independent creative instructor. Craft Made Easy is the legal entity responsible for the sale, delivery, customer support, and all commercial aspects of the digital products offered on this website.</p>
+      <p>Course content for our digital courses and workshops is created and presented by independent creative instructors. Craft Made Easy is the legal entity responsible for the sale, delivery, customer support, and all commercial aspects of the digital products offered on this website.</p>
 
       <h3>4. Course Access and Use</h3>
       <p>After purchase, you will receive access to the course you bought through a private student area hosted on Systeme.io. You agree not to:</p>
@@ -320,8 +320,7 @@
       <h3>2. Eligible Products</h3>
       <p>This refund policy applies to all digital courses and workshops offered under Craft Made Easy, including but not limited to:</p>
       <ul>
-        <li>The Rainbow Mosaic Butterfly Workshop</li>
-        <li>Any future digital courses or workshops</li>
+        <li>All digital courses and workshops offered under Craft Made Easy</li>
       </ul>
       <p>The guarantee does not apply to purchases made outside our official website, or bundles or promotions where the refund policy is explicitly stated as different.</p>
 
@@ -346,10 +345,10 @@
       <p>All content is intended for personal learning, creativity, and artistic development. Nothing in our courses, tutorials, or communications should be interpreted as professional art advice, business advice, or a guaranteed outcome. You are solely responsible for how you use the information provided.</p>
 
       <h3>2. No Guaranteed Results</h3>
-      <p>Your success with painting projects may vary depending on your skill level, your choice of materials, and your personal practice and experience. We do not guarantee that you will achieve the same results as shown in our demonstrations, examples, or student work.</p>
+      <p>Your success with craft projects may vary depending on your skill level, your choice of materials, and your personal practice and experience. We do not guarantee that you will achieve the same results as shown in our demonstrations, examples, or student work.</p>
 
       <h3>3. Use of Materials, Tools, and Equipment</h3>
-      <p>Our courses involve the use of acrylic paints, drawing gum, brushes, and other crafting materials. You agree that you use all materials at your own risk, and that Craft Made Easy is not responsible for damage or accidents resulting from misuse of tools or materials. You must take appropriate safety precautions when working with art materials. Always supervise young users if applicable.</p>
+      <p>Our courses involve the use of various crafting materials and tools. You agree that you use all materials at your own risk, and that Craft Made Easy is not responsible for damage or accidents resulting from misuse of tools or materials. You must take appropriate safety precautions when working with craft materials. Always supervise young users if applicable.</p>
 
       <h3>4. External Links and Third-Party Tools</h3>
       <p>Our website or tutorials may reference third-party resources, tools, or supplies. These links are provided for convenience only. We do not control or endorse third-party websites and are not responsible for their content, accuracy, or practices.</p>
@@ -394,7 +393,7 @@
       <p>All content available on this website — including text, images, logos, videos, course materials, digital downloads, and tutorials — is the exclusive property of Craft Made Easy / Thierry TRESSEL and is protected by French and international copyright laws. Any reproduction, distribution, modification, or unauthorized use of the content is strictly prohibited.</p>
 
       <h3>4. Purpose of the Website</h3>
-      <p>This website provides information, digital courses, and creative workshops related to acrylic painting techniques. It also allows users to purchase online courses and access a private student area hosted on Systeme.io.</p>
+      <p>This website provides information, digital courses, and creative workshops related to handmade crafts and creative making. It also allows users to purchase online courses and access a private student area hosted on Systeme.io.</p>
 
       <h3>5. Personal Data &amp; Privacy</h3>
       <p>Personal data collected on this website is processed in accordance with the GDPR and French data protection laws. To understand how your data is collected, stored, and used, please refer to the Privacy Policy. To learn how cookies and tracking technologies are used, please refer to the Cookie Policy.</p>
@@ -403,4 +402,40 @@
       <p>This site uses cookies necessary for its proper functioning, as well as analytics and marketing cookies, including Meta Pixel, Google Analytics, and Microsoft Clarity. Cookie usage and consent management are handled through CookieYes and are detailed in the Cookie Policy.</p>
 
       <h3>7. Liability</h3>
-      <p>The website owner cannot be held responsible for interruption or unavailability of the website, inaccuracies or omissions in th
+      <p>The website owner cannot be held responsible for interruption or unavailability of the website, inaccuracies or omissions in the content, or any damages resulting from the use of information provided on this site. We reserve the right to modify or update the website content at any time without prior notice.</p>
+
+      <h3>8. Contact</h3>
+      <p>For any questions regarding this Legal Notice, please contact us at: <a href="mailto:<!--email_off-->hello@craftmadeeasy.com<!--/email_off-->"><!--email_off-->hello@craftmadeeasy.com<!--/email_off--></a></p>
+    </div>
+
+  </main>
+</div>
+
+<footer>
+  <a href="/"><img src="images/logo.webp" alt="Craft Made Easy" /></a>
+  <p>© 2026 Craft Made Easy · All rights reserved</p>
+  <div class="footer-links">
+    <a href="/policies#privacy">Privacy Policy</a>
+    <a href="/policies#cookies">Cookie Policy</a>
+    <a href="/policies#terms">Terms &amp; Conditions</a>
+    <a href="/policies#refund">Refund Policy</a>
+  </div>
+</footer>
+
+<script>
+  const links = document.querySelectorAll('.sidebar a');
+  const sections = document.querySelectorAll('.policy-block');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        links.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector('.sidebar a[href="#' + entry.target.id + '"]');
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-30% 0px -60% 0px' });
+  sections.forEach(s => observer.observe(s));
+</script>
+
+</body>
+</html>
