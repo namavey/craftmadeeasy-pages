@@ -389,20 +389,18 @@ em { font-style: italic; }
 <div class="section">
   <div class="content">
     <h2>Introducing The Heart Necklace Course</h2>
-    <img class="page-img-sm" src="images/mock-up-heart-necklace.webp" alt="The Heart Necklace Course - online course on all devices" width="500" height="375" loading="lazy">
-    <p style="text-align:center; font-family:'Playfair Display', serif; font-size:24px; font-weight:400; color:#2c2c2c; line-height:1.4; margin-bottom:24px;"><em>The complete beginner-friendly system for creating a stunning handmade macrame necklace, step by step, with just cord, beads, and two knots.</em></p>
+    <video id="course-video" muted loop playsinline style="width:100%; border-radius:8px; display:block; margin-bottom:24px; background:#f5f0eb; aspect-ratio:16/9;"></video>
+    <p style="text-align:center; font-family:'Playfair Display', serif; font-size:24px; font-weight:400; color:#2c2c2c; line-height:1.4; margin-bottom:24px;"><em>The complete beginner-friendly system for creating a stunning handmade macramé necklace, step by step, with just cord, beads, and two knots.</em></p>
     <ul class="feature-list">
-      <li>🎬 Step-by-step video walkthroughs</li>
-      <li>📱 Access on mobile, tablet, and computer</li>
-      <li>🦥 Work entirely at your own pace</li>
-      <li>♾️ LIFETIME ACCESS, yours to keep forever</li>
+      <li>Create the exact statement necklace shown above.</li>
+      <li>Learn the only two knots needed to make it even if you've never made macrame jewelry before.</li>
+      <li>Wear it proudly or create a handmade gift that people won't believe you made yourself.</li>
     </ul>
+    <div style="text-align:center; margin:32px auto;">
+      <a class="btn-cta" href="https://pay.craftmadeeasy.com/checkout-heart-necklace-course-no-bonus" aria-label="Start Making My Heart Necklace - Join at the special launch price of $47">Start Making My Heart Necklace</a>
+    </div>
 
-    <hr class="divider">
-
-    <p><strong>Here's a small taste of what's inside:</strong></p>
-
-    <hr class="divider">
+    <p style="text-align:center;"><strong>Here's a small taste of what's inside:</strong></p>
 
     <!-- MODULE 1 -->
     <span class="module-header">Module 1</span>
@@ -493,7 +491,7 @@ em { font-style: italic; }
       <p>Normally <s>$97</s></p>
       <p class="highlight" style="font-family:'Playfair Display', serif; font-size:48px; font-weight:700; line-height:1.2; margin-bottom:20px;">Now Only $47</p>
       <p><strong>One-time purchase. Lifetime access.</strong></p>
-      <a class="btn-cta" href="https://pay.craftmadeeasy.com/checkout-heart-necklace-course-no-bonus" aria-label="Yes! I Want to Make This Necklace - Join at the special launch price of $47">Yes! I Want to Make This Necklace</a>
+      <a class="btn-cta" href="https://pay.craftmadeeasy.com/checkout-heart-necklace-course-no-bonus" aria-label="Start Making My Heart Necklace - Join at the special launch price of $47">Start Making My Heart Necklace</a>
       <p><em>Get instant access to all 5 modules and start creating today.</em></p>
       <p style="font-size:15px; color:#888;">P.S. If the next page doesn't load... then you're too late.</p>
       <div style="text-align:center; margin-top:16px;">
@@ -594,7 +592,7 @@ em { font-style: italic; }
       <p>Normally <s>$97</s></p>
       <p class="highlight" style="font-family:'Playfair Display', serif; font-size:48px; font-weight:700; line-height:1.2; margin-bottom:20px;">Now Only $47</p>
       <p><strong>One-time purchase. Lifetime access.</strong></p>
-      <a class="btn-cta" href="https://pay.craftmadeeasy.com/checkout-heart-necklace-course-no-bonus" aria-label="Yes! I Want to Make This Necklace - Join at the special launch price of $47">Yes! I Want to Make This Necklace</a>
+      <a class="btn-cta" href="https://pay.craftmadeeasy.com/checkout-heart-necklace-course-no-bonus" aria-label="Start Making My Heart Necklace - Join at the special launch price of $47">Start Making My Heart Necklace</a>
       <p><em>Get instant access to all 5 modules and start creating today.</em></p>
       <p style="font-size:15px; color:#888;">P.S. If the next page doesn't load... then you're too late.</p>
       <div style="text-align:center; margin-top:16px;">
@@ -667,7 +665,7 @@ em { font-style: italic; }
       <p>Normally <s>$97</s></p>
       <p class="highlight" style="font-family:'Playfair Display', serif; font-size:48px; font-weight:700; line-height:1.2; margin-bottom:20px;">Now Only $47</p>
       <p><strong>One-time purchase. Lifetime access.</strong></p>
-      <a class="btn-cta" href="https://pay.craftmadeeasy.com/checkout-heart-necklace-course-no-bonus" aria-label="Yes! I Want to Make This Necklace - Join at the special launch price of $47">Yes! I Want to Make This Necklace</a>
+      <a class="btn-cta" href="https://pay.craftmadeeasy.com/checkout-heart-necklace-course-no-bonus" aria-label="Start Making My Heart Necklace - Join at the special launch price of $47">Start Making My Heart Necklace</a>
       <p><em>Get instant access to all 5 modules and start creating today.</em></p>
       <p style="font-size:15px; color:#888;">P.S. If the next page doesn't load... then you're too late.</p>
       <div style="text-align:center; margin-top:16px;">
@@ -692,6 +690,19 @@ em { font-style: italic; }
 </footer>
 
 <script>
+// Lazy video
+(function(){
+  var v = document.getElementById('course-video');
+  if (!v) return;
+  new IntersectionObserver(function(entries, obs){
+    if (entries[0].isIntersecting) {
+      v.src = 'videos/heart-necklace.mp4';
+      v.play();
+      obs.disconnect();
+    }
+  }, { threshold: 0.1 }).observe(v);
+})();
+
 // FAQ accordion
 document.querySelectorAll('.faq-q').forEach(q => {
   q.addEventListener('click', () => {
