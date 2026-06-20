@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create Your Own Designer Jewelry Collection — The Gwenda Collection</title>
+<meta name="description" content="Create a stunning black & gold handmade jewelry collection step by step, even if you've never made a single piece before. Beginner-friendly. Lifetime access.">
+<meta property="og:title" content="Create Your Own Designer Jewelry Collection — The Gwenda Collection">
+<meta property="og:description" content="Create a stunning black & gold handmade jewelry collection step by step, even if you've never made a single piece before. Beginner-friendly. Lifetime access.">
+<meta property="og:image" content="images/open-graph-logo.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<link rel="preload" href="fonts/playfair-display-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/playfair-display-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/inter-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="images/moodsetter-gwenda.webp" as="image" type="image/webp" fetchpriority="high">
+<link rel="icon" type="image/webp" href="images/logo.webp">
+
+<script>
+(function(w, d, u, k) {
+  w.ServerTrack = w.ServerTrack || {};
+  w.serverTrackQueue = w.serverTrackQueue || [];
+  w.st = function() { w.serverTrackQueue.push(arguments); };
+  var s = d.createElement('script');
+  s.async = 1;
+  var randomPath = Math.random().toString(36).substring(2, 15);
+  s.src = u + '/lib/' + randomPath + '?key=' + k;
+  var h = d.getElementsByTagName('script')[0];
+  h.parentNode.insertBefore(s, h);
+})(window, document, 'https://data.craftmadeeasy.com', 'VNFR4MORGJEHITLDLWHLNOOLM3W0YTYYNGZKAQTM');
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  st('track', 'ViewContent', {
+    content_ids: ['collection-gwenda-no-bonus'],
+    content_type: 'product',
+    content_name: 'The Gwenda Collection',
+    content_category: 'Course',
+    value: 47.00,
+    currency: 'USD',
+    price: 47.00
+  });
+});
+</script>
+
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  /* Per-collection accent — change these two lines for a new collection */
+  --accent: #C9A227;       /* collection colour (deep, saturated jewel tone) */
+  --accent-ink: #2b2406;   /* CTA text: dark on light accents, light on dark accents */
+  /* Fixed brand foundation — keep across all collections */
+  --accent-strong: #A8861F;
+  --accent-deep: #8C6F1A;   /* darker accent for text/labels on the ivory background */
+  --ivory: #FBF8F2;
+  --ink: #15130F;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #FBF8F2;
+  color: #15130F;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+/* CONTENT WRAPPER */
+.content {
+  max-width: 660px;
+  margin: 0 auto;
+  padding: 0 24px;
+  text-align: center;
+}
+
+/* SECTION SPACING */
+.section { padding: 40px 0; }
+.section-sm { padding: 40px 0; }
+
+/* TYPOGRAPHY */
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: #15130F;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #15130F;
+  line-height: 1.25;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  font-weight: 400;
+  color: #15130F;
+  line-height: 1.3;
+  margin-bottom: 16px;
+}
+
+p {
+  font-size: 20px;
+  color: #15130F;
+  line-height: 1.7;
+  margin-bottom: 28px;
+  text-align: left;
+}
+
+strong { font-weight: 600; }
+
+/* IMAGES */
+.page-img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  margin: 32px auto;
+}
+
+.page-img-sm {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  margin: 28px auto;
+}
+
+/* DIVIDER */
+.divider {
+  width: 140px;
+  height: 2px;
+  background: var(--accent);
+  margin: 56px auto;
+  border: none;
+}
+
+/* BULLET LIST */
+.feature-list {
+  list-style: none;
+  text-align: left;
+  margin: 24px auto;
+  max-width: 620px;
+}
+
+.feature-list li {
+  font-size: 20px;
+  color: #15130F;
+  padding: 10px 0 10px 28px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.feature-list li::before {
+  content: '•';
+  position: absolute;
+  left: 8px;
+  color: var(--accent-deep);
+  font-size: 20px;
+  top: 10px;
+}
+
+.feature-list li strong {
+  font-weight: 600;
+}
+
+/* CTA BOX */
+.cta-box {
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  padding: 36px 32px;
+  margin: 32px auto;
+  max-width: 540px;
+  text-align: center;
+}
+
+.cta-box h3 { text-align: center; }
+.cta-box p { text-align: center; }
+
+.btn-cta {
+  display: block;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-family: 'Inter', sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  padding: 22px 40px;
+  border-radius: 18px;
+  text-decoration: none;
+  text-align: center;
+  margin: 24px auto;
+  max-width: 540px;
+  transition: background 0.2s;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  border: none;
+}
+.btn-cta:hover { background: var(--accent-strong); }
+
+/* PRICE SECTION */
+.price-section { padding: 40px 0; }
+
+.highlight { color: var(--accent-deep); }
+
+/* MODULE SECTION */
+.module-header {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent-deep);
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* FAQ */
+.faq-item {
+  border-bottom: 1px solid #e8e8e8;
+  text-align: left;
+}
+
+.faq-q {
+  font-size: 18px;
+  font-weight: 600;
+  color: #15130F;
+  padding: 24px 40px 24px 0;
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+}
+
+.faq-q::after {
+  content: '+';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  font-weight: 300;
+  color: #888;
+  transition: transform 0.2s;
+}
+
+.faq-item.open .faq-q::after {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.faq-a {
+  font-size: 17px;
+  color: #555;
+  line-height: 1.7;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.2s;
+  text-align: left;
+  padding-left: 16px;
+}
+
+.faq-item.open .faq-a {
+  max-height: 400px;
+  padding-bottom: 24px;
+  padding-top: 12px;
+}
+
+/* FOOTER */
+.site-footer {
+  background: #FBF8F2;
+  border-top: 1px solid #eee;
+  padding: 48px 20px;
+  text-align: center;
+}
+
+.site-footer img {
+  height: 40px;
+  margin-bottom: 16px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-links a {
+  color: #767676;
+  text-decoration: none;
+  margin: 0 10px;
+}
+.footer-links a:hover { color: #555; text-decoration: underline; }
+
+/* INCLUDED SUMMARY */
+.included-list {
+  list-style: none;
+  text-align: left;
+  margin: 24px auto;
+  max-width: 560px;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.included-list li {
+  padding: 14px 20px;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.included-list li:last-child { border-bottom: none; }
+.included-list .check { color: var(--accent-deep); font-size: 18px; flex-shrink: 0; }
+
+/* TOTAL VALUE */
+.total-value {
+  font-size: 20px;
+  font-weight: 600;
+  color: #15130F;
+  margin: 12px 0 4px;
+  text-align: center;
+}
+
+em { font-style: italic; }
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  h1 { font-size: 32px; }
+  h2 { font-size: 26px; }
+  h3 { font-size: 22px; }
+  .btn-cta { font-size: 26px !important; width: 100%; max-width: 100%; box-sizing: border-box; }
+  .cta-box { padding: 24px 16px; }
+  .section { padding: 16px 0; }
+  .price-section { padding: 16px 0; }
+}
+@font-face { font-family: "Inter"; src: url("fonts/inter-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("fonts/inter-latin-500-normal.woff2") format("woff2"); font-weight: 500; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("fonts/inter-latin-600-normal.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Playfair Display"; src: url("fonts/playfair-display-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Playfair Display"; src: url("fonts/playfair-display-latin-700-normal.woff2") format("woff2"); font-weight: 700; font-display: swap; }
+</style>
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "wbme07mf5l");
+    </script>
+</head>
+<body>
+
+<!-- HERO -->
+<main>
+<div class="section" style="padding-top: 16px;">
+  <div class="content">
+    <p style="text-align:center; font-size:15px; letter-spacing:0.08em; text-transform:uppercase; color:#888; margin-bottom:20px;">Join 10,000+ people learning to create beautiful handmade jewelry with Lucie</p>
+    <h1><strong>How to create your own designer jewelry collection... even if you've never made a single piece before</strong></h1>
+    <p style="text-align:center; font-family:'Playfair Display', serif; font-size:24px; font-weight:400; color:#15130F; line-height:1.4; margin-bottom:16px;"><em>(Yes, even if you've never tied a knot in your life... and have zero "artistic" bone in your body.)</em></p>
+    <p style="text-align:center;">You'll go from your very first bracelet... all the way to a stunning signature necklace. One simple project at a time.</p>
+    <img class="page-img" src="images/moodsetter-gwenda.webp" alt="Lucie's hands creating a black and gold macramé jewelry piece" width="600" height="600" fetchpriority="high">
+
+    <p><strong style="font-size:24px;">Imagine if you could...</strong></p>
+    <p>Open a little box and pull out a black and gold necklace so elegant, people assume you bought it from a high-end boutique. Then watch their face when you say... <em>"Actually, I made it myself."</em></p>
+    <ul class="feature-list">
+      <li>Slip on a delicate bracelet you created with your own hands... and catch yourself smiling every time you look down at your wrist</li>
+      <li>Wear your signature necklace out to dinner... and smile quietly when someone asks where you bought it</li>
+      <li>Wear a matching set (bracelet, earrings, brooch, necklace) that looks like it belongs in a curated collection... because it is <strong>your</strong> collection</li>
+      <li>Give one of your pieces as a gift... and see someone's eyes light up, because nothing says <em>I thought about you</em> like something handmade</li>
+      <li>Create something beautiful in an evening... calm, focused, just you and the thread, far from screens and noise</li>
+    </ul>
+    <p>And the best part? <strong>You don't need any experience. No fancy tools. No "talent."</strong> Just thread, a few beads, and someone showing you exactly what to do... step by step.</p>
+  </div>
+</div>
+
+<!-- TRUTH REVEAL -->
+<div class="section" style="background:#FBF8F2; padding:60px 0;">
+  <div class="content">
+    <h2>Here's the thing about beautiful handmade jewelry</h2>
+    <p>Most people never even try... because they're convinced it takes years of practice, expensive equipment, or some natural "gift" they were never born with.</p>
+    <p>They look at an intricate black and gold piece and think: <em>"That's lovely... but there's no way I could ever make that."</em></p>
+    <p>But here's what almost no one tells you. <strong>It's way easier than it looks.</strong></p>
+    <p>That delicate, lacy look that feels so refined? It comes from one thing: simple knots, repeated and arranged. That's it.</p>
+    <p>You tie your first knot. Then a few more. Suddenly you're holding a finished bracelet. Then the next project adds just one new little touch. Then the next. Until one day you realize you've built an entire coordinated collection... <strong>without a single hard step along the way.</strong></p>
+    <p>If you can follow along with a video and use your hands... you can do this.</p>
+  </div>
+</div>
+
+<!-- EMPATHY -->
+<div class="section">
+  <div class="content">
+    <h2>Maybe you've wanted to make something with your hands for a while now</h2>
+    <p>Something beautiful. Something <em>yours</em>.</p>
+    <p>You've scrolled past those gorgeous handmade pieces online... saved a few... maybe even thought <em>"one day I'll learn how to do that."</em></p>
+    <p>But every time you got close to starting, the same little voices showed up.</p>
+    <p style="font-family:'Playfair Display', serif; font-size:24px; font-weight:400; text-align:center; line-height:1.4;"><em>"I wouldn't even know where to begin."</em><br><em>"I'd probably need expensive supplies I'd end up wasting."</em><br><em>"What if I try... and it just looks clumsy and homemade?"</em></p>
+    <p>So you put it off. Again.</p>
+    <p>Here's what nobody says out loud: it's not that you're not creative enough. It's that <strong>no one ever showed you the path.</strong></p>
+    <p>Most tutorials online throw a single project at you with zero context. They show you <em>what</em> they're doing... but never <em>how it actually comes together</em>. So you copy along, get lost halfway, and quietly give up... convinced the problem is you.</p>
+    <p>It was never you. It was the teaching.</p>
+    <p>What you actually need is simple:</p>
+    <ul class="feature-list">
+      <li>To start with something so easy you can't fail at it</li>
+      <li>To add one small new skill at a time, so you're never overwhelmed</li>
+      <li>And to see the <em>whole picture</em> (how a real piece is built, choice by choice) not just a list of steps to copy</li>
+    </ul>
+    <p>That's exactly what's coming.</p>
+  </div>
+</div>
+
+<!-- MEET YOUR GUIDE -->
+<div class="section" style="background:#FBF8F2;">
+  <div class="content">
+    <h2>Meet your guide</h2>
+    <img class="page-img-sm" src="images/image_lucie.webp" alt="Lucie, your jewelry-making guide" width="500" height="375" loading="lazy">
+    <p><strong>Hi, I'm Lucie.</strong></p>
+    <p>I didn't grow up thinking of myself as a "jewelry maker." Honestly, I started exactly where you might be right now.</p>
+    <p>I've always loved drawing and sewing... anything where I could work with my hands and make something beautiful. One day I discovered the art of working with thread, knot by knot, and I was hooked. I started purely for the pleasure of it.</p>
+    <p>Little by little, I developed my own techniques. I refined my style. And something I didn't expect happened: people started asking me to show them <em>how</em>. So I did. And I fell in love with teaching it.</p>
+    <p>Today, a community of <strong>more than 10,000 people</strong> creates and grows with me on YouTube. I've watched complete beginners tie their very first knot... and go on to make pieces they never imagined they could create.</p>
+    <p>This is the course I wish I'd had when I was starting out. Someone who shows you not just <em>how</em> to make the moves... but how a real creation comes together, step by step. Not just the gestures... but <strong>the thread of the whole thing.</strong></p>
+    <p>I want you to feel what my students feel: that quiet pride of holding something beautiful in your hands and thinking... <em>"I made this."</em></p>
+  </div>
+</div>
+
+<!-- THE COURSE -->
+<div class="section">
+  <div class="content">
+    <h2>Introducing The Gwenda Collection</h2>
+    <img class="page-img-sm" src="images/mock-up-gwenda.webp" alt="The Gwenda Collection on all devices" width="500" height="375" loading="lazy">
+    <p style="text-align:center; font-family:'Playfair Display', serif; font-size:24px; font-weight:400; color:#15130F; line-height:1.4; margin-bottom:24px;"><em>A complete, step-by-step journey from your very first knot... to a coordinated black and gold jewelry collection you'll be proud to wear every day.</em></p>
+    <p>This isn't a random pile of tutorials. It's <strong>one guided path</strong>, carefully ordered so every project builds on the last. You start simple. You finish with a signature necklace as elegant as anything in a boutique window.</p>
+    <p>Each lesson is filmed up close, at a calm, follow-along pace... so you can pause, rewind, and create right alongside me. No rushing. No skipped steps. No "wait, how did she get there?" And once you own it, it's yours for life.</p>
+    <div style="text-align:center; margin:32px auto;">
+      <a class="btn-cta" href="https://pay.craftmadeeasy.com/checkout-collection-gwenda-no-bonus" aria-label="Get lifetime access to The Gwenda Collection for $47">Get Lifetime Access Now</a>
+    </div>
+
+    <hr class="divider" style="margin-top:120px;">
+    <h2>What you'll create, step by step</h2>
+    <p style="text-align:center;">Five projects. One collection. Each one teaching you something new... without ever feeling hard.</p>
+
+    <hr class="divider">
+
+    <!-- MODULE 1 -->
+    <span class="module-header">Module 1 — Your First Piece</span>
+    <h2>The black &amp; gold bracelet that proves you can do this</h2>
+    <p>This is where it clicks. In your very first lesson, you'll go from a length of thread to a finished bracelet you can actually wear out the door... today. We keep it beautifully simple, so you get that first win fast.</p>
+    <img class="page-img-sm" src="images/module-1-gwenda.webp" alt="Module 1 - The delicate black and gold chain bracelet" width="500" height="375" loading="lazy">
+    <ul class="feature-list">
+      <li>The two foundational knots that <strong>secretly make up 90% of every piece</strong> in the entire collection</li>
+      <li>The little tension trick that separates "homemade" from "handmade-with-love" (most beginners never learn this)</li>
+      <li>How to set your first black bead so it sits perfectly centered, every time</li>
+      <li>The gold-accent move that makes a plain thread bracelet suddenly look refined</li>
+    </ul>
+    <p>By the end of lesson one, you won't <em>believe</em> a beginner made it. (You did.)</p>
+
+    <hr class="divider">
+
+    <!-- MODULE 2 -->
+    <span class="module-header">Module 2 — Your Signature Bracelet</span>
+    <h2>Where "I'm trying this" becomes "I'm actually a maker"</h2>
+    <p>Now we level up. Same easy knots you already know... arranged into something that genuinely looks designed. This is the bracelet people stop and ask you about.</p>
+    <img class="page-img-sm" src="images/module-2-gwenda.webp" alt="Module 2 - The signature bracelet with gold half-crown and scrollwork" width="500" height="375" loading="lazy">
+    <ul class="feature-list">
+      <li>The five-bead gold "half-crown" that becomes the <strong>signature touch</strong> running through your whole collection</li>
+      <li>Your first <em>scrollwork</em>: the soft curves that make handmade jewelry look intricate (it's far simpler than it appears)</li>
+      <li>How to keep both sides even, so your piece looks polished and refined</li>
+      <li>The finishing detail that makes a bracelet look <em>designed</em>, not just made</li>
+    </ul>
+    <p>The moment you clasp this one on... you'll feel it. You're not a beginner anymore.</p>
+
+    <hr class="divider">
+
+    <!-- MODULE 3 -->
+    <span class="module-header">Module 3 — The Statement Brooch</span>
+    <h2>Breaking free from straight lines into flowing, organic art</h2>
+    <p>Here's where it gets exciting. You'll leave simple symmetry behind and learn to create free, flowing shapes... the kind that make people think <em>real artist</em>. Don't worry. You'll be ready for this by the time you arrive.</p>
+    <img class="page-img-sm" src="images/module-3-gwenda.webp" alt="Module 3 - The ornate flowing brooch with scrolls and gold beads" width="500" height="375" loading="lazy">
+    <ul class="feature-list">
+      <li>How to "draw" with thread: building graceful curves freehand, with total confidence</li>
+      <li>The secret to <strong>organic composition</strong> so your piece flows naturally instead of looking stiff</li>
+      <li>Working on a brooch base (a brand-new little skill that opens up a whole world of pieces)</li>
+      <li>How to balance a design that <em>isn't</em> symmetrical and still looks intentional and elegant</li>
+    </ul>
+    <p>This is the project where you stop making jewelry... and start making art you can pin to anything.</p>
+
+    <hr class="divider">
+
+    <!-- MODULE 4 -->
+    <span class="module-header">Module 4 — The Coordinated Earrings</span>
+    <h2>The little details that turn pieces into a collection</h2>
+    <p>A real collection is <em>coordinated</em>. So now you'll create earrings that echo your bracelets and tie the whole set together. Small pieces, big payoff... and a beautiful exercise in precision.</p>
+    <img class="page-img-sm" src="images/module-4-gwenda.webp" alt="Module 4 - The matching black and gold drop earrings" width="500" height="375" loading="lazy">
+    <ul class="feature-list">
+      <li>The mirroring technique that makes both earrings come out <strong>perfectly matched</strong> (no more "close enough")</li>
+      <li>How to work small and neat, so tiny pieces still look crisp and refined</li>
+      <li>Attaching ear hooks cleanly, so your earrings look effortless, not fiddly</li>
+      <li>The repetition trick that builds real precision into your hands... almost without trying</li>
+    </ul>
+    <p>Slip these in, glance in the mirror, and watch your handmade set suddenly look <em>complete</em>.</p>
+
+    <hr class="divider">
+
+    <!-- MODULE 5 -->
+    <span class="module-header">Module 5 — The Signature Necklace</span>
+    <h2>Your masterpiece. The "I can't believe I made this" moment.</h2>
+    <p>This is the grand finale. Everything you've learned comes together into one showstopping necklace... the centerpiece of your entire collection. When you finish this, you won't just <em>have</em> an elegant necklace. You'll <strong>be</strong> the person who made it.</p>
+    <img class="page-img-sm" src="images/module-5-gwenda.webp" alt="Module 5 - The elegant black and gold signature necklace on its bust" width="500" height="375" loading="lazy">
+    <ul class="feature-list">
+      <li>How to compose a full piece: balance, proportion, and visual flow across the whole necklace</li>
+      <li>Arranging your motifs so the eye travels exactly where you want it to</li>
+      <li>The refined way to make a necklace sit and hang just right around the neck</li>
+      <li>Bringing your black bead and gold accents together into one harmonious, finished statement</li>
+    </ul>
+    <p>Imagine opening your jewelry box and seeing an entire collection you once thought only a professional could make... and realizing every single piece inside was made by you.</p>
+  </div>
+</div>
+
+<!-- TRANSFORMATION -->
+<div class="section" style="background:#FBF8F2;">
+  <div class="content">
+    <h2>By the end, you'll have...</h2>
+    <p>Not a folder of half-finished attempts. A real, <strong>coordinated collection</strong> you made with your own two hands:</p>
+    <ul class="feature-list">
+      <li>A delicate everyday bracelet</li>
+      <li>A signature statement bracelet</li>
+      <li>A flowing, artistic brooch</li>
+      <li>A pair of perfectly matched earrings</li>
+      <li>And your showstopping signature necklace</li>
+    </ul>
+    <p>All in that elegant black and gold... all clearly part of <em>one</em> collection... all unmistakably <strong>yours</strong>.</p>
+    <p>By the end, you'll open your jewelry box, look at a full collection worthy of any boutique... and know that <em>you</em> created every piece. Not bought. <strong>Made.</strong></p>
+    <p>That quiet confidence? That little voice that finally says <em>"I'm someone who makes beautiful things"</em>? That's the real transformation. The jewelry is just the proof.</p>
+  </div>
+</div>
+
+<!-- PRICING 1 -->
+<div class="price-section" style="background:#FBF8F2;">
+  <div class="content">
+    <h2>Here's how to get started</h2>
+    <p>When I first shared these projects with my own students, the response was <strong>overwhelmingly positive.</strong> People who'd never made a single piece were suddenly creating full collections... and couldn't stop showing them off.</p>
+    <p>So I put everything into one complete, follow-along program. Every project. Every technique. Every little detail. And I wanted to make it genuinely accessible... not locked behind some intimidating price tag.</p>
+    <p>A course like this, taught one-on-one, would easily run a few hundred dollars. But you won't pay anywhere near that. The full Gwenda Collection is just <strong>$47.</strong></p>
+    <p>(That's less than what one finished piece would cost you in a boutique... except here, you learn to make a whole collection of them, for life.)</p>
+
+    <div class="cta-box">
+      <p><strong>The Gwenda Collection</strong></p>
+      <p><em>Your complete step-by-step journey to a designer jewelry collection</em></p>
+      <p>Normally <s>$97</s></p>
+      <p class="highlight" style="font-family:'Playfair Display', serif; font-size:48px; font-weight:700; line-height:1.2; margin-bottom:20px;">Now Only $47</p>
+      <p><strong>One-time purchase. Lifetime access. 30-Day Guarantee.</strong></p>
+      <a class="btn-cta" href="https://pay.craftmadeeasy.com/checkout-collection-gwenda-no-bonus" aria-label="Get lifetime access to The Gwenda Collection for $47">&#8594; Get Lifetime Access Now</a>
+      <p><em>Get instant access to all 5 projects and start creating today.</em></p>
+      <p style="font-size:15px; color:#888;">P.S. If the next page doesn't load... you're too late.</p>
+      <div style="text-align:center; margin-top:16px;">
+        <img src="images/payment.webp" alt="Payment methods accepted" width="500" height="100" style="max-width:220px; height:auto; display:block; margin:0 auto 12px;">
+        <img src="images/secure.webp" alt="Secure payment" width="500" height="100" style="max-width:180px; height:auto; display:block; margin:0 auto;">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- GUARANTEE -->
+<div class="section" style="background:#FBF8F2;">
+  <div class="content">
+    <h3><strong>You're fully protected by my unconditional money-back guarantee</strong></h3>
+    <img src="images/guarantee.webp" alt="30-day money-back guarantee" width="250" height="200" style="max-width:150px; height:auto; display:block; margin:28px auto;">
+    <p>Try the entire Gwenda Collection completely risk-free for a full <strong>30 days.</strong></p>
+    <p>Start the lessons. Tie your first knots. Make your first piece. If you don't absolutely love what you're creating, just email me anytime within 30 days at <a href="mailto:hello@craftmadeeasy.com" style="color:var(--accent-deep);">hello@craftmadeeasy.com</a> and I'll refund every cent. <strong>No questions asked.</strong></p>
+    <p>There's truly no risk here. The only way to find out what you can make... is to start.</p>
+    <p><strong>"You either love what you create... or you don't pay for it."</strong></p>
+  </div>
+</div>
+
+<!-- BONUSES -->
+<div class="section">
+  <div class="content">
+    <h2>And to help you go even further…</h2>
+    <p>When you join today, you're not just getting the five projects. You're getting everything you need to make this <em>effortless</em>, beautiful, and proud-worthy from the very first day.</p>
+    <p style="text-align:center;"><strong>Get 3 FREE Bonuses When You Join</strong></p>
+
+    <hr class="divider">
+
+    <span class="module-header">Bonus 1</span>
+    <h2>Your Macrame Starter Kit</h2>
+    <p>The #1 thing that stops beginners? Not knowing what to buy. This bonus removes that worry completely. I'll hand you my exact supply list, so you skip the guesswork and the wasted money.</p>
+    <img class="page-img-sm" src="images/bonus-1-gwenda.webp" alt="Bonus 1 - Macrame Starter Kit with thread, beads and tools" width="500" height="375">
+    <ul class="feature-list">
+      <li>The precise thread, beads, and tools I use (with the exact references)</li>
+      <li>Where to buy everything, <strong>wherever you live in the world</strong></li>
+      <li>Affordable alternatives if something isn't available near you</li>
+      <li>How to set up your little workspace so creating feels calm and easy</li>
+    </ul>
+    <p style="text-align:center;"><strong>Value: <s>$19</s> &rarr; <span class="highlight">FREE</span></strong></p>
+
+    <hr class="divider">
+
+    <span class="module-header">Bonus 2</span>
+    <h2>The Pro-Finish Secrets</h2>
+    <p>Worried your pieces might look a little amateur? This bonus is your safety net. These are the tiny finishing touches that make your work look beautifully refined.</p>
+    <img class="page-img-sm" src="images/bonus-2-gwenda.webp" alt="Bonus 2 - Pro-Finish Secrets, perfectly finished bracelet ends" width="500" height="375">
+    <ul class="feature-list">
+      <li>How to get that even, consistent tension that looks flawless</li>
+      <li>The clean way to hide and tuck your threads, so there are no messy ends</li>
+      <li>How to shape crisp, smooth curves instead of lumpy ones</li>
+      <li>Quick fixes for the little imperfections every beginner runs into</li>
+    </ul>
+    <p style="text-align:center;"><strong>Value: <s>$24</s> &rarr; <span class="highlight">FREE</span></strong></p>
+
+    <hr class="divider">
+
+    <span class="module-header">Bonus 3</span>
+    <h2>Show Off Your Jewelry</h2>
+    <p>You're going to be <em>proud</em> of what you make. This bonus helps you capture it beautifully... whether to gift, to keep, or to share.</p>
+    <img class="page-img-sm" src="images/bonus-3-gwenda.webp" alt="Bonus 3 - A finished piece styled and photographed on black background" width="500" height="375">
+    <ul class="feature-list">
+      <li>The simple black-background setup that makes gold accents pop</li>
+      <li>How to light your pieces so they look rich and elegant</li>
+      <li>Easy styling tricks to make any piece look its best</li>
+      <li>How to take gorgeous photos with <strong>just your phone</strong> (no fancy camera needed)</li>
+    </ul>
+    <p style="text-align:center;"><strong>Value: <s>$19</s> &rarr; <span class="highlight">FREE</span></strong></p>
+  </div>
+</div>
+
+<!-- INCLUDED RECAP -->
+<div class="price-section" style="background:#FBF8F2;">
+  <div class="content">
+    <h2>Here's everything you get when you join today:</h2>
+    <img class="page-img-sm" src="images/mock-up-gwenda.webp" alt="The Gwenda Collection - course and bonuses on all devices" width="500" height="375" loading="lazy">
+    <p>Everything you need to go from a blank workspace... to a full collection you're proud to wear or give.</p>
+    <ul class="included-list">
+      <li><span class="check">✓</span><span><strong>The Gwenda Collection</strong> (5 step-by-step projects) (<s>$97</s> &rarr; <strong class="highlight">$47</strong>)</span></li>
+      <li><span class="check" style="padding-left:16px;">&#9658;</span><span>Module 1: Your First Piece — the black &amp; gold bracelet</span></li>
+      <li><span class="check" style="padding-left:16px;">&#9658;</span><span>Module 2: Your Signature Bracelet</span></li>
+      <li><span class="check" style="padding-left:16px;">&#9658;</span><span>Module 3: The Statement Brooch</span></li>
+      <li><span class="check" style="padding-left:16px;">&#9658;</span><span>Module 4: The Coordinated Earrings</span></li>
+      <li><span class="check" style="padding-left:16px;">&#9658;</span><span>Module 5: The Signature Necklace</span></li>
+      <li><span class="check">✓</span><span><strong>Bonus 1: Your Macrame Starter Kit</strong> (<s>$19</s> &rarr; <strong class="highlight">FREE</strong>)</span></li>
+      <li><span class="check">✓</span><span><strong>Bonus 2: The Pro-Finish Secrets</strong> (<s>$24</s> &rarr; <strong class="highlight">FREE</strong>)</span></li>
+      <li><span class="check">✓</span><span><strong>Bonus 3: Show Off Your Jewelry</strong> (<s>$19</s> &rarr; <strong class="highlight">FREE</strong>)</span></li>
+    </ul>
+    <p style="text-align:left;">So you're not guessing... struggling... or starting over.</p>
+    <p class="total-value">That's $159 in total value.</p>
+    <p style="text-align:center;">Today, you get everything for just <strong class="highlight">$47</strong></p>
+
+    <div class="cta-box">
+      <p><strong>This is your moment to make something you're proud of.</strong></p>
+      <p>Normally <s>$97</s></p>
+      <p class="highlight" style="font-family:'Playfair Display', serif; font-size:48px; font-weight:700; line-height:1.2; margin-bottom:20px;">Now Only $47</p>
+      <p><strong>One-time purchase. Lifetime access.</strong></p>
+      <a class="btn-cta" href="https://pay.craftmadeeasy.com/checkout-collection-gwenda-no-bonus" aria-label="Get lifetime access to The Gwenda Collection for $47">&#8594; Get Lifetime Access Now</a>
+      <p><em>Get instant access to all 5 projects and 3 bonuses, starting today.</em></p>
+      <p style="font-size:15px; color:#888;">P.S. If the next page doesn't load... you're too late.</p>
+      <div style="text-align:center; margin-top:16px;">
+        <img src="images/payment.webp" alt="Payment methods accepted" width="500" height="100" style="max-width:220px; height:auto; display:block; margin:0 auto 12px;">
+        <img src="images/secure.webp" alt="Secure payment" width="500" height="100" style="max-width:180px; height:auto; display:block; margin:0 auto;">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="section">
+  <div class="content">
+    <h2>Frequently asked questions</h2>
+    <p style="text-align:center; font-size:17px; color:#555;">Need help? <a href="mailto:hello@craftmadeeasy.com" style="color:var(--accent-deep);">hello@craftmadeeasy.com</a></p>
+
+    <div class="faq-item">
+      <div class="faq-q">I've truly never made jewelry before. Can I really do this?</div>
+      <div class="faq-a">Yes... and this was built exactly for you. You start with one simple knot and one easy bracelet, then add one small new skill at a time. There's no prior experience needed, and nothing is rushed. If you can follow a video and use your hands, you can make every piece in this collection.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Do I need expensive supplies or special tools?</div>
+      <div class="faq-a">Not at all. Just thread, some beads, and a few basic bits you very likely already have at home. Your Starter Kit bonus gives you the exact list and where to find everything affordably, wherever you live.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">How long are the lessons, and how fast do I have to go?</div>
+      <div class="faq-a">You go entirely at your own pace. Every lesson is filmed up close and slow enough to follow along in real time. Pause, rewind, and rewatch as often as you like. There's no schedule and no pressure.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What if I get stuck on a project?</div>
+      <div class="faq-a">You can rewind and rewatch any step as many times as you need, forever. The whole course is built so each skill is broken down clearly... and the Pro-Finish Secrets bonus is there to help you smooth out any little bumps along the way.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Is this real macrame? It looks so delicate.</div>
+      <div class="faq-a">It is... just the fine, delicate kind used for jewelry rather than the chunky wall-hanging style. That lacy, refined look comes from simple knots arranged beautifully, which is exactly what you'll learn to do.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">When do I get access, and how long is it mine?</div>
+      <div class="faq-a">Right away. The moment you join, the entire collection unlocks... and it's yours for life. Every project, every bonus, every future update. Watch it whenever you want, as many times as you want.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What if it's not for me?</div>
+      <div class="faq-a">Then you pay nothing. Try it, make your first piece, and if you don't love it, email hello@craftmadeeasy.com anytime within 30 days for a full refund. No questions asked.</div>
+    </div>
+  </div>
+</div>
+
+<!-- FINAL RECAP -->
+<div class="price-section" style="background:#FBF8F2;">
+  <div class="content">
+    <p style="text-align:center; font-size:22px;">If you've read this far... then some part of you already knows you want to make these. Let's go.</p>
+    <h2>Here's everything you're getting now for just $47:</h2>
+    <img class="page-img-sm" src="images/mock-up-gwenda.webp" alt="The Gwenda Collection - full course and all bonuses" width="500" height="375" loading="lazy">
+    <ul class="included-list">
+      <li><span class="check">✓</span><span><strong>The Gwenda Collection</strong> — 5 step-by-step projects <em>(value: $97)</em></span></li>
+      <li><span class="check">✓</span><span><strong>Bonus 1: Your Macrame Starter Kit</strong> <em>(value: $19)</em></span></li>
+      <li><span class="check">✓</span><span><strong>Bonus 2: The Pro-Finish Secrets</strong> <em>(value: $24)</em></span></li>
+      <li><span class="check">✓</span><span><strong>Bonus 3: Show Off Your Jewelry</strong> <em>(value: $19)</em></span></li>
+      <li><span class="check">✓</span><span>Lifetime access + 30-Day Guarantee</span></li>
+    </ul>
+    <p class="total-value">Total Value: <s>$159</s></p>
+    <p style="text-align:center;">Today, you get everything for just <strong class="highlight">$47</strong></p>
+
+    <div class="cta-box">
+      <p><strong>This is your moment to make something you're proud of.</strong></p>
+      <p>Normally <s>$97</s></p>
+      <p class="highlight" style="font-family:'Playfair Display', serif; font-size:48px; font-weight:700; line-height:1.2; margin-bottom:20px;">Now Only $47</p>
+      <p><strong>One-time purchase. Lifetime access.</strong></p>
+      <a class="btn-cta" href="https://pay.craftmadeeasy.com/checkout-collection-gwenda-no-bonus" aria-label="Get lifetime access to The Gwenda Collection for $47">&#8594; Get Lifetime Access Now</a>
+      <p><em>Get instant access to all 5 projects and 3 bonuses, starting today.</em></p>
+      <p style="font-size:15px; color:#888;">P.S. If the next page doesn't load... you're too late.</p>
+      <div style="text-align:center; margin-top:16px;">
+        <img src="images/payment.webp" alt="Payment methods accepted" width="500" height="100" style="max-width:220px; height:auto; display:block; margin:0 auto 12px;">
+        <img src="images/secure.webp" alt="Secure payment" width="500" height="100" style="max-width:180px; height:auto; display:block; margin:0 auto;">
+      </div>
+    </div>
+  </div>
+</div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <img src="images/logo.webp" alt="Craft Made Easy" width="100" height="100" style="height:auto;">
+  <p style="font-size:14px; color:#767676; text-align:center; margin-bottom:4px;">© 2026 Craft Made Easy</p>
+  <p style="font-size:14px; color:#767676; text-align:center; margin-bottom:4px;">All rights reserved</p>
+  <p style="font-size:14px; color:#767676; text-align:center; margin-bottom:4px;"><a href="https://www.craftmadeeasy.com/policies" target="_blank" rel="noopener" style="color:#767676; text-decoration:none;">Policies</a></p>
+  <p style="font-size:14px; color:#767676; text-align:center; margin-bottom:4px;"><a href="https://www.craftmadeeasy.com/contact" target="_blank" rel="noopener" style="color:#767676; text-decoration:none;">Contact</a></p>
+  <p style="font-size:14px; color:#767676; text-align:center; margin-top:4px;">Craft Made Easy - Creative Craft Courses</p>
+  <p style="font-size:12px; color:#aaa; text-align:center; margin-top:16px; line-height:1.5;">This site is not a part of the Facebook or Instagram websites or Meta Platforms Inc.<br>This site is NOT endorsed by Meta in any way.<br>FACEBOOK and INSTAGRAM are trademarks of Meta Platforms Inc.</p>
+</footer>
+
+<script>
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(q => {
+  q.addEventListener('click', () => {
+    const item = q.parentElement;
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  });
+});
+</script>
+
+</body>
+</html>
