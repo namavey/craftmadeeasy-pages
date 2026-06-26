@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Create Your Own Designer Jewelry Collection — The Gwenda Collection</title>
+<title>Create Your Own Designer Jewelry Collection — The Colette Collection</title>
 <meta name="description" content="Create a stunning black & gold handmade jewelry collection step by step, even if you've never made a single piece before. Beginner-friendly. Lifetime access.">
-<meta property="og:title" content="Create Your Own Designer Jewelry Collection — The Gwenda Collection">
+<meta property="og:title" content="Create Your Own Designer Jewelry Collection — The Colette Collection">
 <meta property="og:description" content="Create a stunning black & gold handmade jewelry collection step by step, even if you've never made a single piece before. Beginner-friendly. Lifetime access.">
 <meta property="og:image" content="images/open-graph-logo.png">
 <meta property="og:image:width" content="1200">
@@ -15,7 +15,7 @@
 <link rel="preload" href="fonts/playfair-display-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/inter-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="images/moodsetter-gwenda.webp" as="image" type="image/webp" fetchpriority="high">
+<link rel="preload" href="images/moodsetter-colette.webp" as="image" type="image/webp" fetchpriority="high">
 <link rel="icon" type="image/webp" href="images/logo.webp">
 
 <script>
@@ -34,9 +34,9 @@
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   st('track', 'ViewContent', {
-    content_ids: ['collection-gwenda'],
+    content_ids: ['collection-colette-no-bonus'],
     content_type: 'product',
-    content_name: 'The Gwenda Collection',
+    content_name: 'The Colette Collection',
     content_category: 'Course',
     value: 47.00,
     currency: 'USD',
@@ -65,48 +65,6 @@ body {
   color: #15130F;
   font-size: 20px;
   line-height: 1.6;
-}
-
-/* COUNTDOWN BAR */
-.countdown-bar {
-  background: #15130F;
-  padding: 10px 20px;
-  text-align: center;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-.countdown-inner {
-  display: inline-flex;
-  gap: 8px;
-  align-items: center;
-}
-.cd-unit {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-width: 52px;
-}
-.cd-num {
-  font-family: 'Inter', sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: var(--accent);
-  letter-spacing: 0.05em;
-  line-height: 1;
-}
-.cd-label {
-  font-size: 12px;
-  color: #cccccc;
-  letter-spacing: 0.12em;
-  margin-top: 3px;
-  font-weight: 400;
-}
-.cd-sep {
-  font-size: 22px;
-  color: var(--accent);
-  font-weight: 700;
-  padding-bottom: 12px;
 }
 
 /* CONTENT WRAPPER */
@@ -226,13 +184,8 @@ strong { font-weight: 600; }
   text-align: center;
 }
 
-.cta-box h3 {
-  text-align: center;
-}
-
-.cta-box p {
-  text-align: center;
-}
+.cta-box h3 { text-align: center; }
+.cta-box p { text-align: center; }
 
 .btn-cta {
   display: block;
@@ -256,47 +209,8 @@ strong { font-weight: 600; }
 }
 .btn-cta:hover { background: var(--accent-strong); }
 
-.btn-note {
-  font-size: 14px;
-  color: #888;
-  margin-top: -12px;
-  margin-bottom: 16px;
-}
-
 /* PRICE SECTION */
-.price-section {
-  padding: 40px 0;
-}
-
-.price-was {
-  font-size: 28px;
-  color: #888;
-  text-decoration: line-through;
-  margin-bottom: 4px;
-  display: block;
-}
-
-.price-label {
-  font-size: 22px;
-  font-weight: 400;
-  color: #15130F;
-  margin-bottom: 8px;
-}
-
-.price-now {
-  font-family: 'Playfair Display', serif;
-  font-size: 64px;
-  font-weight: 700;
-  color: var(--accent-deep);
-  line-height: 1;
-  margin: 8px 0;
-}
-
-.price-terms {
-  font-size: 17px;
-  color: #555;
-  margin-bottom: 24px;
-}
+.price-section { padding: 40px 0; }
 
 .highlight { color: var(--accent-deep); }
 
@@ -309,31 +223,6 @@ strong { font-weight: 600; }
   color: var(--accent-deep);
   margin-bottom: 6px;
   display: block;
-}
-
-/* GUARANTEE */
-.guarantee-box {
-  background: #FBF8F2;
-  border: 1px solid #eee;
-  border-radius: 12px;
-  padding: 48px 40px;
-  text-align: center;
-  margin: 40px auto;
-}
-
-/* PAYMENT IMGS */
-.payment-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin: 20px auto;
-}
-.payment-row img {
-  height: 36px;
-  max-width: 180px;
-  object-fit: contain;
 }
 
 /* FAQ */
@@ -401,12 +290,6 @@ strong { font-weight: 600; }
   margin-right: auto;
 }
 
-.footer-links {
-  font-size: 14px;
-  color: #767676;
-  margin-top: 8px;
-}
-
 .footer-links a {
   color: #767676;
   text-decoration: none;
@@ -435,7 +318,6 @@ strong { font-weight: 600; }
 }
 
 .included-list li:last-child { border-bottom: none; }
-
 .included-list .check { color: var(--accent-deep); font-size: 18px; flex-shrink: 0; }
 
 /* TOTAL VALUE */
@@ -447,7 +329,6 @@ strong { font-weight: 600; }
   text-align: center;
 }
 
-/* ITALIC */
 em { font-style: italic; }
 
 /* PAYMENT ROW */
@@ -466,7 +347,6 @@ em { font-style: italic; }
   h1 { font-size: 32px; }
   h2 { font-size: 26px; }
   h3 { font-size: 22px; }
-  .price-now { font-size: 48px; }
   .btn-cta { font-size: 26px !important; width: 100%; max-width: 100%; box-sizing: border-box; }
   .cta-box { padding: 24px 16px; }
   .section { padding: 16px 0; }
@@ -488,17 +368,6 @@ em { font-style: italic; }
 </head>
 <body>
 
-<!-- COUNTDOWN BAR -->
-<div class="countdown-bar">
-  <div class="countdown-inner">
-    <div class="cd-unit"><span class="cd-num" id="cd-hours">01</span><span class="cd-label">HOURS</span></div>
-    <span class="cd-sep">:</span>
-    <div class="cd-unit"><span class="cd-num" id="cd-mins">14</span><span class="cd-label">MINUTES</span></div>
-    <span class="cd-sep">:</span>
-    <div class="cd-unit"><span class="cd-num" id="cd-secs">59</span><span class="cd-label">SECONDS</span></div>
-  </div>
-</div>
-
 <!-- HERO -->
 <main>
 <div class="section" style="padding-top: 16px;">
@@ -506,7 +375,7 @@ em { font-style: italic; }
     <p style="text-align:center; font-size:16px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:rgba(0,0,0,0.88); margin:16px 0 32px;">Join 10,000+ people creating beautiful handmade jewelry with Lucie</p>
     <h1><strong>How to create your own designer jewelry collection... even if you've never made a single piece before</strong></h1>
     <p style="text-align:center; font-family:'Playfair Display', serif; font-size:24px; font-weight:400; color:#15130F; line-height:1.4; margin-bottom:16px;"><em>No experience required. Just follow along, step by step.</em></p>
-    <img class="page-img" src="images/moodsetter-gwenda.webp" alt="Lucie's hands creating a black and gold macramé jewelry piece" width="600" height="600" fetchpriority="high" style="margin-bottom:16px;">
+    <img class="page-img" src="images/moodsetter-colette.webp" alt="Lucie's hands creating a black and gold macramé jewelry piece" width="600" height="600" fetchpriority="high" style="margin-bottom:16px;">
 
     <p><strong style="font-size:24px;">Imagine if you could...</strong></p>
     <ul class="feature-list">
@@ -566,8 +435,8 @@ em { font-style: italic; }
 <!-- THE COURSE -->
 <div class="section">
   <div class="content">
-    <h2>Introducing The Gwenda Collection</h2>
-    <img class="page-img-sm" src="images/mock-up-gwenda.webp" alt="The Gwenda Collection on all devices" width="500" height="375" loading="lazy">
+    <h2>Introducing The Colette Collection</h2>
+    <img class="page-img-sm" src="images/mock-up-colette.webp" alt="The Colette Collection on all devices" width="500" height="375" loading="lazy">
     <p>From your very first knot… to a designer jewelry collection you'll be proud to wear.</p>
     <p>Every project builds naturally on the last, so by the end you'll have created a beautifully coordinated set of pieces.</p>
 
@@ -577,7 +446,7 @@ em { font-style: italic; }
     <span class="module-header">Module 1 — Your First Piece</span>
     <h2>The black &amp; gold bracelet that proves you can do this</h2>
     <p>In your very first lesson, you'll go from a length of thread to a finished bracelet you can actually wear out the door... today. We keep it beautifully simple, so you get that first win fast.</p>
-    <img class="page-img-sm" src="images/module-1-gwenda.webp" alt="Module 1 - The delicate black and gold chain bracelet" width="500" height="375" loading="lazy">
+    <img class="page-img-sm" src="images/module-1-colette.webp" alt="Module 1 - The delicate black and gold chain bracelet" width="500" height="375" loading="lazy">
     <ul class="feature-list">
       <li>The two foundational knots that <strong>secretly make up 90% of every piece</strong> in the entire collection</li>
       <li>The little tension trick that separates "homemade" from "handmade-with-love" (most beginners never learn this)</li>
@@ -592,7 +461,7 @@ em { font-style: italic; }
     <span class="module-header">Module 2 — Your Signature Bracelet</span>
     <h2>Where "I'm trying this" becomes "I'm actually a maker"</h2>
     <p>Now we level up. Same easy knots you already know... arranged into something that genuinely looks designed. This is the bracelet people stop and ask you about.</p>
-    <img class="page-img-sm" src="images/module-2-gwenda.webp" alt="Module 2 - The signature bracelet with gold half-crown and scrollwork" width="500" height="375" loading="lazy">
+    <img class="page-img-sm" src="images/module-2-colette.webp" alt="Module 2 - The signature bracelet with gold half-crown and scrollwork" width="500" height="375" loading="lazy">
     <ul class="feature-list">
       <li>The five-bead gold "half-crown" that becomes the <strong>signature touch</strong> running through your whole collection</li>
       <li>Your first <em>scrollwork</em>: the soft curves that make handmade jewelry look intricate (it's far simpler than it appears)</li>
@@ -607,7 +476,7 @@ em { font-style: italic; }
     <span class="module-header">Module 3 — The Statement Brooch</span>
     <h2>Breaking free from straight lines into flowing, organic designs</h2>
     <p>Here's where your collection begins to develop its own personality. You'll move beyond simple symmetry and learn to create graceful, flowing shapes that naturally draw the eye. It may look impressive, but by now you'll have all the skills you need to create it with confidence.</p>
-    <img class="page-img-sm" src="images/module-3-gwenda.webp" alt="Module 3 - The ornate flowing brooch with scrolls and gold beads" width="500" height="375" loading="lazy">
+    <img class="page-img-sm" src="images/module-3-colette.webp" alt="Module 3 - The ornate flowing brooch with scrolls and gold beads" width="500" height="375" loading="lazy">
     <ul class="feature-list">
       <li>How to "draw" with thread: building graceful curves freehand, with total confidence</li>
       <li>The secret to <strong>organic composition</strong> so your piece flows naturally instead of looking stiff</li>
@@ -622,7 +491,7 @@ em { font-style: italic; }
     <span class="module-header">Module 4 — The Coordinated Earrings</span>
     <h2>The little details that turn pieces into a collection</h2>
     <p>A real collection is <em>coordinated</em>. Now you'll create earrings that echo your bracelets and bring the whole set together. Small pieces, big payoff… and a beautiful exercise in precision.</p>
-    <img class="page-img-sm" src="images/module-4-gwenda.webp" alt="Module 4 - The matching black and gold drop earrings" width="500" height="375" loading="lazy">
+    <img class="page-img-sm" src="images/module-4-colette.webp" alt="Module 4 - The matching black and gold drop earrings" width="500" height="375" loading="lazy">
     <ul class="feature-list">
       <li>The mirroring technique that makes both earrings come out <strong>perfectly matched</strong> (no more "close enough")</li>
       <li>How to work small and neat, so tiny pieces still look crisp and refined</li>
@@ -637,7 +506,7 @@ em { font-style: italic; }
     <span class="module-header">Module 5 — The Signature Necklace</span>
     <h2>Your masterpiece. The "I can't believe I made this" moment.</h2>
     <p>This is the grand finale. Everything you've learned comes together into one showstopping necklace… the centerpiece of your entire collection.</p>
-    <img class="page-img-sm" src="images/module-5-gwenda.webp" alt="Module 5 - The elegant black and gold signature necklace on its bust" width="500" height="375" loading="lazy">
+    <img class="page-img-sm" src="images/module-5-colette.webp" alt="Module 5 - The elegant black and gold signature necklace on its bust" width="500" height="375" loading="lazy">
     <ul class="feature-list">
       <li>How to compose a full piece: balance, proportion, and visual flow across the whole necklace</li>
       <li>Arranging your motifs so the eye travels exactly where you want it to</li>
@@ -652,7 +521,7 @@ em { font-style: italic; }
 <div class="price-section" style="background:#FBF8F2;">
   <div class="content">
     <h2>Here's how to get started</h2>
-    <p>Everything you need to create your own <strong>Gwenda Collection</strong> is right here.</p>
+    <p>Everything you need to create your own <strong>Colette Collection</strong> is right here.</p>
     <p>Every project. Step by step. Nothing left to guess.</p>
     <p>Yours for just <strong>$47.</strong></p>
     <p>Less than what a single designer piece could cost.</p>
@@ -663,7 +532,7 @@ em { font-style: italic; }
       <div style="display:flex; justify-content:center; font-family:'Playfair Display', serif; font-size:48px; font-weight:700; line-height:1.2; margin-top:24px; margin-bottom:24px; color:var(--accent-deep);">Currently $47</div>
       <p>&nbsp;</p>
       <img src="images/guarentees.svg" alt="One-time purchase · Lifetime access · 30-day money-back guarantee" width="880" height="100" style="width:100%; height:auto; display:block; margin:0 auto 24px;">
-      <a class="btn-cta" href="https://pay.craftmadeeasy.com/checkout-collection-gwenda" aria-label="Get instant access to The Gwenda Collection for $47">&#8594; Get Instant Access</a>
+      <a class="btn-cta" href="https://pay.craftmadeeasy.com/checkout-collection-colette-no-bonus" aria-label="Get instant access to The Colette Collection for $47">&#8594; Get Instant Access</a>
       <div class="payment-row">
         <img src="images/payment.webp" alt="Payment methods accepted" width="500" height="100" style="max-width:220px; height:auto;">
         <img src="images/secure.webp" alt="Secure payment" width="500" height="100" style="max-width:180px; height:auto;">
@@ -678,7 +547,7 @@ em { font-style: italic; }
   <div class="content">
     <h3><strong>Your 30-Day Money-Back Guarantee</strong></h3>
     <img src="images/guarantee.webp" alt="30-day money-back guarantee" width="250" height="200" style="max-width:150px; height:auto; display:block; margin:28px auto;">
-    <p>Try the entire Gwenda Collection completely risk-free for 30 days.</p>
+    <p>Try the entire Colette Collection completely risk-free for 30 days.</p>
     <p>Start the lessons. Tie your first knots. Make your first piece.</p>
     <p>If you don't absolutely love what you're creating, simply contact me within 30 days and I'll refund every cent. <strong>No questions asked.</strong></p>
     <p>The only way to discover what you're capable of creating... is to begin.</p>
@@ -699,7 +568,7 @@ em { font-style: italic; }
     <span class="module-header">Bonus 1</span>
     <h2>Your Macrame Starter Kit</h2>
     <p>The #1 thing that stops beginners? Not knowing what to buy. This bonus takes that uncertainty away completely. I'll show you exactly what I use, so you skip the guesswork and the wasted money.</p>
-    <img class="page-img-sm" src="images/bonus-1-gwenda.webp" alt="Bonus 1 - Macrame Starter Kit with thread, beads and tools" width="500" height="375">
+    <img class="page-img-sm" src="images/bonus-1-colette.webp" alt="Bonus 1 - Macrame Starter Kit with thread, beads and tools" width="500" height="375">
     <ul class="feature-list">
       <li>The precise thread, beads, and tools I use (with the exact references)</li>
       <li>Where to buy everything, <strong>wherever you live in the world</strong></li>
@@ -713,7 +582,7 @@ em { font-style: italic; }
     <span class="module-header">Bonus 2</span>
     <h2>The Pro-Finish Secrets</h2>
     <p>Worried your pieces might look a little amateur? These are the tiny finishing touches that make your work look beautifully refined.</p>
-    <img class="page-img-sm" src="images/bonus-2-gwenda.webp" alt="Bonus 2 - Pro-Finish Secrets, perfectly finished bracelet ends" width="500" height="375">
+    <img class="page-img-sm" src="images/bonus-2-colette.webp" alt="Bonus 2 - Pro-Finish Secrets, perfectly finished bracelet ends" width="500" height="375">
     <ul class="feature-list">
       <li>How to get that even, consistent tension that looks flawless</li>
       <li>The clean way to hide and tuck your threads, so there are no messy ends</li>
@@ -727,7 +596,7 @@ em { font-style: italic; }
     <span class="module-header">Bonus 3</span>
     <h2>Show Off Your Jewelry</h2>
     <p>You're going to be <em>proud</em> of what you make. Beautiful jewelry deserves beautiful photos. Whether you keep them as memories, share them with friends, or post them online…</p>
-    <img class="page-img-sm" src="images/bonus-3-gwenda.webp" alt="Bonus 3 - A finished piece styled and photographed on black background" width="500" height="375">
+    <img class="page-img-sm" src="images/bonus-3-colette.webp" alt="Bonus 3 - A finished piece styled and photographed on black background" width="500" height="375">
     <ul class="feature-list">
       <li>The simple black-background setup that makes gold accents pop</li>
       <li>How to light your pieces so they look rich and elegant</li>
@@ -738,14 +607,14 @@ em { font-style: italic; }
   </div>
 </div>
 
-<!-- INCLUDED RECAP 1 -->
+<!-- INCLUDED RECAP -->
 <div class="price-section" style="background:#FBF8F2;">
   <div class="content">
     <h2>Everything You Get Today</h2>
-    <img class="page-img-sm" src="images/mock-up-gwenda.webp" alt="The Gwenda Collection - course and bonuses on all devices" width="500" height="375" loading="lazy">
+    <img class="page-img-sm" src="images/mock-up-colette.webp" alt="The Colette Collection - course and bonuses on all devices" width="500" height="375" loading="lazy">
     <p>Everything included when you join today.</p>
     <ul class="included-list">
-      <li><span class="check">✓</span><span><strong>The Gwenda Collection</strong> (5 step-by-step projects)</span></li>
+      <li><span class="check">✓</span><span><strong>The Colette Collection</strong> (5 step-by-step projects)</span></li>
       <li><span class="check" style="padding-left:16px;">&#9658;</span><span>Module 1: Your First Piece — the black &amp; gold bracelet</span></li>
       <li><span class="check" style="padding-left:16px;">&#9658;</span><span>Module 2: Your Signature Bracelet</span></li>
       <li><span class="check" style="padding-left:16px;">&#9658;</span><span>Module 3: The Statement Brooch</span></li>
@@ -755,6 +624,7 @@ em { font-style: italic; }
       <li><span class="check">✓</span><span><strong>Bonus 2: The Pro-Finish Secrets</strong> (<s>$24</s> &rarr; <strong class="highlight">FREE</strong>)</span></li>
       <li><span class="check">✓</span><span><strong>Bonus 3: Show Off Your Jewelry</strong> (<s>$19</s> &rarr; <strong class="highlight">FREE</strong>)</span></li>
     </ul>
+    <p style="text-align:left;">So you're not guessing... struggling... or starting over.</p>
     <p class="total-value">Course Value: $97</p>
     <p class="total-value">Bonus Value: $62</p>
     <p class="total-value">That's $159 in total value.</p>
@@ -766,66 +636,7 @@ em { font-style: italic; }
       <div style="display:flex; justify-content:center; font-family:'Playfair Display', serif; font-size:48px; font-weight:700; line-height:1.2; margin-top:24px; margin-bottom:24px; color:var(--accent-deep);">Currently $47</div>
       <p>&nbsp;</p>
       <img src="images/guarentees.svg" alt="One-time purchase · Lifetime access · 30-day money-back guarantee" width="880" height="100" style="width:100%; height:auto; display:block; margin:0 auto 24px;">
-      <a class="btn-cta" href="https://pay.craftmadeeasy.com/checkout-collection-gwenda" aria-label="Get instant access to The Gwenda Collection for $47">&#8594; Get Instant Access</a>
-      <div class="payment-row">
-        <img src="images/payment.webp" alt="Payment methods accepted" width="500" height="100" style="max-width:220px; height:auto;">
-        <img src="images/secure.webp" alt="Secure payment" width="500" height="100" style="max-width:180px; height:auto;">
-      </div>
-      <p style="font-size:15px; color:#888; margin-top:16px;">P.S. If the next page shows a different price, the $47 offer has closed.</p>
-    </div>
-  </div>
-</div>
-
-<!-- TIMER BONUS -->
-<div class="section">
-  <div class="content">
-    <p style="text-align:center; font-size:24px;"><strong>But why stop there?</strong></p>
-    <p>There's one last piece waiting for you.</p>
-    <span class="module-header">Special Bonus — Available Before the Timer Ends Only</span>
-    <h2>The Gwenda Mastery Bracelet</h2>
-    <p>Complete your collection with the most intricate bracelet in the Gwenda series — bringing together everything you've learned into one elegant final project.</p>
-    <img class="page-img-sm" src="images/bonus-timer-gwenda.webp" alt="Bonus 4 - The ornate, richly detailed Gwenda Mastery Bracelet" width="500" height="375">
-    <ul class="feature-list">
-      <li>Richer scrollwork for an even more refined look</li>
-      <li>Beautiful layered details that add depth and elegance</li>
-      <li>Finishing techniques that bring every element together</li>
-      <li>A bracelet you'll proudly wear for years to come</li>
-    </ul>
-    <p style="text-align:center;"><strong>Value: <s>$37</s> &rarr; <span class="highlight">FREE</span></strong></p>
-    <p style="text-align:center;"><strong>P.S. Enroll before the timer reaches zero and this bonus is yours at no extra cost.</strong></p>
-  </div>
-</div>
-
-<!-- INCLUDED RECAP 2 -->
-<div class="price-section" style="background:#FBF8F2;">
-  <div class="content">
-    <h2>Everything You Get Today</h2>
-    <img class="page-img-sm" src="images/mock-up-gwenda.webp" alt="The Gwenda Collection - full course and all bonuses" width="500" height="375" loading="lazy">
-    <p>Everything included when you join today.</p>
-    <ul class="included-list">
-      <li><span class="check">✓</span><span><strong>The Gwenda Collection</strong> (5 step-by-step projects)</span></li>
-      <li><span class="check" style="padding-left:16px;">&#9658;</span><span>Module 1: Your First Piece — the black &amp; gold bracelet</span></li>
-      <li><span class="check" style="padding-left:16px;">&#9658;</span><span>Module 2: Your Signature Bracelet</span></li>
-      <li><span class="check" style="padding-left:16px;">&#9658;</span><span>Module 3: The Statement Brooch</span></li>
-      <li><span class="check" style="padding-left:16px;">&#9658;</span><span>Module 4: The Coordinated Earrings</span></li>
-      <li><span class="check" style="padding-left:16px;">&#9658;</span><span>Module 5: The Signature Necklace</span></li>
-      <li><span class="check">✓</span><span><strong>Bonus 1: Your Macrame Starter Kit</strong> (<s>$19</s> &rarr; <strong class="highlight">FREE</strong>)</span></li>
-      <li><span class="check">✓</span><span><strong>Bonus 2: The Pro-Finish Secrets</strong> (<s>$24</s> &rarr; <strong class="highlight">FREE</strong>)</span></li>
-      <li><span class="check">✓</span><span><strong>Bonus 3: Show Off Your Jewelry</strong> (<s>$19</s> &rarr; <strong class="highlight">FREE</strong>)</span></li>
-      <li><span class="check">✓</span><span><strong>Bonus 4: The Gwenda Mastery Bracelet</strong> (<s>$37</s> &rarr; <strong class="highlight">FREE</strong>)</span></li>
-    </ul>
-    <p class="total-value">Course Value: $97</p>
-    <p class="total-value">Bonus Value: $99</p>
-    <p class="total-value">That's $196 in total value.</p>
-    <p style="text-align:center;">Today, Yours for Just <strong class="highlight">$47</strong></p>
-
-    <h2 style="font-family:'Playfair Display', serif; font-size:32px; font-weight:700; line-height:1.3; margin-bottom:24px; color:#15130F; text-align:center;">Yes - I Want the Complete Collection</h2>
-    <div class="cta-box">
-      <p style="margin-bottom:0;">Total Value $196</p>
-      <div style="display:flex; justify-content:center; font-family:'Playfair Display', serif; font-size:48px; font-weight:700; line-height:1.2; margin-top:24px; margin-bottom:24px; color:var(--accent-deep);">Currently $47</div>
-      <p>&nbsp;</p>
-      <img src="images/guarentees.svg" alt="One-time purchase · Lifetime access · 30-day money-back guarantee" width="880" height="100" style="width:100%; height:auto; display:block; margin:0 auto 24px;">
-      <a class="btn-cta" href="https://pay.craftmadeeasy.com/checkout-collection-gwenda" aria-label="Get instant access to The Gwenda Collection for $47">&#8594; Get Instant Access</a>
+      <a class="btn-cta" href="https://pay.craftmadeeasy.com/checkout-collection-colette-no-bonus" aria-label="Get instant access to The Colette Collection for $47">&#8594; Get Instant Access</a>
       <div class="payment-row">
         <img src="images/payment.webp" alt="Payment methods accepted" width="500" height="100" style="max-width:220px; height:auto;">
         <img src="images/secure.webp" alt="Secure payment" width="500" height="100" style="max-width:180px; height:auto;">
@@ -876,27 +687,26 @@ em { font-style: italic; }
   <div class="content">
     <p style="text-align:center; font-size:22px;">If you've read this far... then some part of you already knows you want to make these. Let's go.</p>
     <h2>Everything You Get Today</h2>
-    <img class="page-img-sm" src="images/mock-up-gwenda.webp" alt="The Gwenda Collection - full course and all bonuses" width="500" height="375" loading="lazy">
+    <img class="page-img-sm" src="images/mock-up-colette.webp" alt="The Colette Collection - full course and all bonuses" width="500" height="375" loading="lazy">
     <ul class="included-list">
-      <li><span class="check">✓</span><span><strong>The Gwenda Collection</strong> — 5 step-by-step projects <em>(value: $97)</em></span></li>
+      <li><span class="check">✓</span><span><strong>The Colette Collection</strong> — 5 step-by-step projects <em>(value: $97)</em></span></li>
       <li><span class="check">✓</span><span><strong>Bonus 1: Your Macrame Starter Kit</strong> <em>(value: $19)</em></span></li>
       <li><span class="check">✓</span><span><strong>Bonus 2: The Pro-Finish Secrets</strong> <em>(value: $24)</em></span></li>
       <li><span class="check">✓</span><span><strong>Bonus 3: Show Off Your Jewelry</strong> <em>(value: $19)</em></span></li>
-      <li><span class="check">✓</span><span><strong>Bonus 4: The Gwenda Mastery Bracelet</strong> <em>(before the timer ends — value: $37)</em></span></li>
       <li><span class="check">✓</span><span>Lifetime access + 30-Day Guarantee</span></li>
     </ul>
     <p class="total-value">Course Value: $97</p>
-    <p class="total-value">Bonus Value: $99</p>
-    <p class="total-value">That's $196 in total value.</p>
+    <p class="total-value">Bonus Value: $62</p>
+    <p class="total-value">That's $159 in total value.</p>
     <p style="text-align:center;">Today, Yours for Just <strong class="highlight">$47</strong></p>
 
     <h2 style="font-family:'Playfair Display', serif; font-size:32px; font-weight:700; line-height:1.3; margin-bottom:24px; color:#15130F; text-align:center;">Yes - I'm Ready to Start Creating</h2>
     <div class="cta-box">
-      <p style="margin-bottom:0;">Total Value $196</p>
+      <p style="margin-bottom:0;">Total Value $159</p>
       <div style="display:flex; justify-content:center; font-family:'Playfair Display', serif; font-size:48px; font-weight:700; line-height:1.2; margin-top:24px; margin-bottom:24px; color:var(--accent-deep);">Currently $47</div>
       <p>&nbsp;</p>
       <img src="images/guarentees.svg" alt="One-time purchase · Lifetime access · 30-day money-back guarantee" width="880" height="100" style="width:100%; height:auto; display:block; margin:0 auto 24px;">
-      <a class="btn-cta" href="https://pay.craftmadeeasy.com/checkout-collection-gwenda" aria-label="Get instant access to The Gwenda Collection for $47">&#8594; Get Instant Access</a>
+      <a class="btn-cta" href="https://pay.craftmadeeasy.com/checkout-collection-colette-no-bonus" aria-label="Get instant access to The Colette Collection for $47">&#8594; Get Instant Access</a>
       <div class="payment-row">
         <img src="images/payment.webp" alt="Payment methods accepted" width="500" height="100" style="max-width:220px; height:auto;">
         <img src="images/secure.webp" alt="Secure payment" width="500" height="100" style="max-width:180px; height:auto;">
@@ -919,44 +729,6 @@ em { font-style: italic; }
 </footer>
 
 <script>
-// Countdown timer - 1h15m with localStorage persistence
-const DURATION = (1 * 60 + 15) * 60 * 1000;
-const REDIRECT_URL = 'https://www.craftmadeeasy.com/collection-gwenda-no-bonus';
-const STORAGE_KEY = 'collection_gwenda_countdown_end';
-
-let endTime = parseInt(localStorage.getItem(STORAGE_KEY));
-
-if (!endTime || isNaN(endTime)) {
-  endTime = Date.now() + DURATION;
-  localStorage.setItem(STORAGE_KEY, endTime);
-}
-
-if (Date.now() >= endTime) {
-  window.location.replace(REDIRECT_URL);
-}
-
-function updateCountdown() {
-  const now = Date.now();
-  const diff = Math.max(0, endTime - now);
-
-  if (diff === 0) {
-    window.location.replace(REDIRECT_URL);
-    return;
-  }
-
-  const hours = Math.floor(diff / 3600000);
-  const mins = Math.floor((diff % 3600000) / 60000);
-  const secs = Math.floor((diff % 60000) / 1000);
-  document.getElementById('cd-hours').textContent = String(hours).padStart(2, '0');
-  document.getElementById('cd-mins').textContent = String(mins).padStart(2, '0');
-  document.getElementById('cd-secs').textContent = String(secs).padStart(2, '0');
-}
-
-requestAnimationFrame(() => {
-  updateCountdown();
-  setInterval(updateCountdown, 1000);
-});
-
 // FAQ accordion
 document.querySelectorAll('.faq-q').forEach(q => {
   q.addEventListener('click', () => {
